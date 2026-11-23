@@ -1,0 +1,14 @@
+- main [ref=f49e2]:
+  - generic [ref=f49e3]:
+    - generic [ref=f49e4]:
+      - generic [aria-hidden] [ref=f49e5]: F
+      - text: Fibrofácil
+    - heading "Iniciar sesión" [level=1] [ref=f49e6]
+    - generic [ref=f49e7]:
+      - generic [ref=f49e8]:
+        - text: Usuario
+        - textbox "Usuario" [active] [ref=f49e9]
+      - generic [ref=f49e10]:
+        - text: Contraseña
+        - textbox "Contraseña" [ref=f49e11]
+      - button "Ingresar" [ref=f49e12] [cursor=pointer]

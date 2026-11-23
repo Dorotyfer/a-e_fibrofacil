@@ -3,7 +3,9 @@ CREATE TABLE IF NOT EXISTS users (
   name VARCHAR(120) NOT NULL,
   username VARCHAR(80) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL,
-  role ENUM('admin','seller') NOT NULL
+  role ENUM('admin','seller') NOT NULL,
+  active BOOLEAN NOT NULL DEFAULT 1,
+  session_version INT UNSIGNED NOT NULL DEFAULT 0
 );
 CREATE TABLE IF NOT EXISTS salaries (
   user_id INT NOT NULL REFERENCES users(id),
@@ -35,10 +37,18 @@ CREATE TABLE IF NOT EXISTS products (
   plot MEDIUMBLOB NOT NULL,
   selection TEXT NOT NULL
 );
+CREATE TABLE IF NOT EXISTS customers (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  phone VARCHAR(40) NOT NULL DEFAULT '',
+  email VARCHAR(160) NOT NULL DEFAULT '',
+  address VARCHAR(250) NOT NULL DEFAULT ''
+);
 CREATE TABLE IF NOT EXISTS orders (
   id INT AUTO_INCREMENT PRIMARY KEY,
   seller_id INT NOT NULL REFERENCES users(id),
   customer VARCHAR(120) NOT NULL,
+  customer_id INT NULL REFERENCES customers(id),
   total BIGINT NOT NULL,
   status ENUM('review','pending','delivered') NOT NULL DEFAULT 'review',
   stocked BOOLEAN NOT NULL DEFAULT 0,

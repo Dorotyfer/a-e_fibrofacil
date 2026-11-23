@@ -1,0 +1,72 @@
+- generic [active] [ref=f31e1]:
+  - complementary [ref=f31e2]:
+    - link "Fibrofácil" [ref=f31e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f31e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f31e5]:
+      - link "Pedidos" [ref=f31e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f31e7] [cursor=pointer]:
+        - /url: "?page=products"
+      - link "Materia prima" [ref=f31e8] [cursor=pointer]:
+        - /url: "?page=materials"
+      - link "Vendedores" [ref=f31e9] [cursor=pointer]:
+        - /url: "?page=sellers"
+      - link "Usuarios" [ref=f31e10] [cursor=pointer]:
+        - /url: "?page=users"
+      - link "Reportes" [ref=f31e11] [cursor=pointer]:
+        - /url: "?page=reports"
+    - generic [ref=f31e12]:
+      - strong [ref=f31e13]: Administración
+      - generic [ref=f31e14]: Administrador
+      - button "Cerrar sesión" [ref=f31e16] [cursor=pointer]
+  - main [ref=f31e17]:
+    - status [ref=f31e18]: Cambios guardados.
+    - heading "Usuarios" [level=1] [ref=f31e20]
+    - generic [ref=f31e21]:
+      - generic [ref=f31e22]:
+        - heading "Cuentas" [level=2] [ref=f31e23]
+        - table [ref=f31e25]:
+          - rowgroup [ref=f31e26]:
+            - row [ref=f31e27]:
+              - columnheader "Nombre" [ref=f31e28]
+              - columnheader "Usuario" [ref=f31e29]
+              - columnheader "Rol" [ref=f31e30]
+          - rowgroup [ref=f31e31]:
+            - row [ref=f31e32]:
+              - cell [ref=f31e33]:
+                - link "Administración" [ref=f31e34] [cursor=pointer]:
+                  - /url: "?page=users&edit=1"
+              - cell "admin" [ref=f31e35]
+              - cell "Administrador" [ref=f31e36]
+            - row [ref=f31e37]:
+              - cell [ref=f31e38]:
+                - link "Administrador de prueba" [ref=f31e39] [cursor=pointer]:
+                  - /url: "?page=users&edit=3"
+              - cell "admin_prueba" [ref=f31e40]
+              - cell "Administrador" [ref=f31e41]
+            - row [ref=f31e42]:
+              - cell [ref=f31e43]:
+                - link "Vendedor de prueba" [ref=f31e44] [cursor=pointer]:
+                  - /url: "?page=users&edit=2"
+              - cell "prueba" [ref=f31e45]
+              - cell "Vendedor" [ref=f31e46]
+      - generic [ref=f31e47]:
+        - heading "Añadir usuario" [level=2] [ref=f31e48]
+        - generic [ref=f31e49]:
+          - generic [ref=f31e50]:
+            - text: Nombre
+            - textbox "Nombre" [ref=f31e51]
+          - generic [ref=f31e52]:
+            - text: Usuario
+            - textbox "Usuario" [ref=f31e53]
+          - generic [ref=f31e54]:
+            - text: Rol
+            - combobox "Rol" [ref=f31e55]:
+              - option "Vendedor" [selected]
+              - option "Administrador"
+          - generic [ref=f31e56]:
+            - text: Contraseña (mínimo 12 caracteres)
+            - textbox "Contraseña (mínimo 12 caracteres)" [ref=f31e57]
+          - button "Guardar usuario" [ref=f31e59] [cursor=pointer]

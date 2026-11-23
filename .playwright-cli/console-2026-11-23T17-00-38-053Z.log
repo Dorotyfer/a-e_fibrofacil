@@ -1,0 +1,2 @@
+[   49516ms] [ERROR] Framing 'http://localhost/' violates the following Content Security Policy directive: "frame-ancestors 'none'". The request has been blocked.
+ @ :1

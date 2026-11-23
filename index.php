@@ -4,6 +4,7 @@ require __DIR__ . '/app/geometry.php';
 require __DIR__ . '/app/catalog.php';
 require __DIR__ . '/app/orders.php';
 require __DIR__ . '/app/accounts.php';
+require __DIR__ . '/app/customers.php';
 require __DIR__ . '/app/http.php';
 require __DIR__ . '/app/view.php';
 
@@ -15,17 +16,23 @@ session_start();
 $_SESSION['csrf'] ??= bin2hex(random_bytes(32));
 header('X-Content-Type-Options: nosniff');
 header('Cache-Control: no-store');
-header("Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'; style-src 'self'");
+header("Content-Security-Policy: default-src 'self'; frame-ancestors 'self'; base-uri 'none'; form-action 'self'; style-src 'self'");
 
 $user = null;
 $errorPage = null;
 $page = 'login';
-$pages = ['orders' => 'Pedidos', 'products' => 'Productos', 'materials' => 'Materia prima',
-  'sellers' => 'Vendedores', 'reports' => 'Reportes'];
+$pages = ['orders' => 'Pedidos', 'sales' => 'Ventas', 'billing' => 'Facturación', 'customers' => 'Clientes', 'products' => 'Productos', 'materials' => 'Materia prima',
+  'sellers' => 'Vendedores', 'users' => 'Usuarios', 'reports' => 'Reportes',
+  'sales_sellers' => 'Ventas por vendedor', 'sales_general' => 'Ventas generales',
+  'material_purchases' => 'Compras de materia prima', 'customer_report' => 'Reporte de clientes'];
 try {
   $db = database();
   if (isset($_SESSION['user_id'])) {
-    $user = query($db, 'SELECT id,name,role FROM users WHERE id=?', [$_SESSION['user_id']])->fetch() ?: null;
+    $user = query($db, 'SELECT id,name,role FROM users WHERE id=? AND active=1 AND session_version=?',
+      [$_SESSION['user_id'], $_SESSION['session_version'] ?? -1])->fetch() ?: null;
+    if (!$user) {
+      unset($_SESSION['user_id'], $_SESSION['session_version']);
+    }
   }
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($_POST) && (int) ($_SERVER['CONTENT_LENGTH'] ?? 0) > 0) {
@@ -35,7 +42,7 @@ try {
     handlePost($db, $user, $_POST, $_FILES);
   }
   if ($user) {
-    $page = is_string($_GET['page'] ?? null) ? $_GET['page'] : 'orders';
+    $page = is_string($_GET['page'] ?? null) ? $_GET['page'] : 'home';
     if ($page === 'proof') {
       downloadProof($db, $user, integer($_GET['id'] ?? null));
     }
@@ -47,11 +54,11 @@ try {
       }
       sendFile('application/octet-stream', $plot['filename'], $plot['plot']);
     }
-    if (in_array($page, ['materials', 'sellers', 'reports'], true)) {
+    if (in_array($page, ['materials', 'sellers', 'users', 'reports', 'sales_sellers', 'sales_general', 'material_purchases', 'customer_report'], true)) {
       requireRole($user, 'admin');
     }
-    if (!isset($pages[$page])) {
-      $page = 'orders';
+    if (!isset($pages[$page]) && $page !== 'home') {
+      $page = 'home';
     }
   }
 } catch (DomainException $error) {
@@ -65,13 +72,15 @@ try {
   $errorPage = 'No se pudo acceder al sistema. Verifica la instalación y la conexión a MySQL.';
 }
 
-$title = $pages[$page] ?? 'Ingresar';
+$title = $page === 'home' ? 'Menú principal' : ($pages[$page] ?? 'Ingresar');
 $notice = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
 ob_start();
 if (!$errorPage) {
   try {
-    require __DIR__ . '/views/' . $page . '.php';
+    $reportPages = ['sales_sellers', 'sales_general', 'material_purchases', 'customer_report'];
+    $view = in_array($page, $reportPages, true) ? 'report-detail' : ($page === 'sales' ? 'orders' : $page);
+    require __DIR__ . '/views/' . $view . '.php';
   } catch (DomainException $error) {
     ob_clean();
     http_response_code(404);

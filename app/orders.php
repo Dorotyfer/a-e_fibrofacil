@@ -41,12 +41,20 @@ function recordPayment(PDO $db, int $order, string $stage, int $amount, array $p
 }
 
 function createOrder(PDO $db, array $input, array $proof, int $seller): int {
-  $customer = field($input, 'cliente', 120);
+  $customerId = integer($input['customer_id'] ?? 0, 0);
+  if ($customerId) {
+    $customer = query($db, 'SELECT name FROM customers WHERE id=?', [$customerId])->fetchColumn();
+    if ($customer === false) {
+      throw new DomainException('Selecciona un cliente válido.');
+    }
+  } else {
+    $customer = field($input, 'cliente', 120);
+  }
   $ids = $input['product'] ?? null;
   if (!is_array($ids) || !$ids || count($ids) > 30) {
     throw new DomainException('Agrega entre 1 y 30 líneas al pedido.');
   }
-  return atomic($db, function () use ($db, $input, $proof, $seller, $customer, $ids) {
+  return atomic($db, function () use ($db, $input, $proof, $seller, $customer, $customerId, $ids) {
     $items = [];
     $total = 0;
     foreach ($ids as $index => $id) {
@@ -68,7 +76,7 @@ function createOrder(PDO $db, array $input, array $proof, int $seller): int {
     if ($total !== $expected) {
       throw new DomainException('El precio cambió. Vuelve a comprobar el importe de la seña.');
     }
-    query($db, 'INSERT INTO orders (seller_id,customer,total,created_at) VALUES (?,?,?,?)', [$seller, $customer, $total, now()]);
+    query($db, 'INSERT INTO orders (seller_id,customer,customer_id,total,created_at) VALUES (?,?,?,?,?)', [$seller, $customer, $customerId ?: null, $total, now()]);
     $order = (int) $db->lastInsertId();
     foreach ($items as $item) {
       query($db, 'INSERT INTO order_items (order_id,product_id,name,quantity,channel,price,unit_cost,mdf_id,area,glue)

@@ -1,8 +1,9 @@
 <?php
 $products = $db->query('SELECT id,name,size,retail,wholesale FROM products ORDER BY name,id')->fetchAll();
+$customers = $db->query('SELECT id,name,phone FROM customers ORDER BY name,id')->fetchAll();
 ?>
-<a href="?page=orders">← Pedidos</a>
-<header class="page-header"><h1>Nuevo pedido</h1></header>
+<a href="?page=<?= e($page) ?>">← <?= $page === 'sales' ? 'Ventas' : 'Pedidos' ?></a>
+<header class="page-header"><h1>Nueva venta</h1></header>
 <?php if (!$products): ?>
   <p class="notice">El catálogo todavía no tiene productos disponibles.</p>
 <?php else: ?>
@@ -11,7 +12,13 @@ $products = $db->query('SELECT id,name,size,retail,wholesale FROM products ORDER
   <input type="hidden" name="expected_total">
   <section class="panel stack">
     <h2>Detalle del pedido</h2>
-    <label>Cliente<input name="cliente" maxlength="120" required></label>
+    <label>Cliente<select name="customer_id" required>
+      <option value="">Selecciona un cliente</option>
+      <?php foreach ($customers as $customer): ?>
+        <option value="<?= $customer['id'] ?>"><?= e($customer['name'] . ($customer['phone'] ? ' · ' . $customer['phone'] : '')) ?></option>
+      <?php endforeach; ?>
+    </select></label>
+    <?php if (!$customers): ?><p>Primero registra el cliente en el módulo Clientes.</p><?php endif; ?>
     <div class="stack" data-order-lines></div>
     <div><button type="button" class="secondary" data-add-line>Añadir producto</button></div>
     <template data-order-line>

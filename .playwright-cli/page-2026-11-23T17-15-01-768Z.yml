@@ -1,0 +1,139 @@
+- generic [ref=f45e1]:
+  - banner [ref=f45e2]:
+    - link "Fibrofácil" [ref=f45e3] [cursor=pointer]:
+      - /url: "?page=home"
+      - generic [aria-hidden] [ref=f45e4]: F
+      - text: Fibrofácil
+    - generic [ref=f45e5]:
+      - strong [ref=f45e6]: Administración
+      - generic [ref=f45e7]: Administrador
+    - button "Cerrar sesión" [ref=f45e9] [cursor=pointer]
+  - navigation "Módulos" [ref=f45e10]:
+    - generic [ref=f45e11]:
+      - generic [ref=f45e12]:
+        - heading "Trabajo diario" [level=2] [ref=f45e13]
+        - generic [ref=f45e14]: 4 módulos
+      - generic [ref=f45e15]:
+        - link "Pedidos Ventas, pagos y entregas" [ref=f45e16] [cursor=pointer]:
+          - /url: "?page=orders"
+          - generic [aria-hidden] [ref=f45e17]: ▤
+          - generic [ref=f45e18]:
+            - strong [ref=f45e19]: Pedidos
+            - generic [ref=f45e20]: Ventas, pagos y entregas
+          - generic [aria-hidden] [ref=f45e21]: ↗
+        - link "Clientes Datos y contactos" [ref=f45e22] [cursor=pointer]:
+          - /url: "?page=customers"
+          - generic [aria-hidden] [ref=f45e23]: ◎
+          - generic [ref=f45e24]:
+            - strong [ref=f45e25]: Clientes
+            - generic [ref=f45e26]: Datos y contactos
+          - generic [aria-hidden] [ref=f45e27]: ↗
+        - link "Productos Diseños, costos y precios" [ref=f45e28] [cursor=pointer]:
+          - /url: "?page=products"
+          - generic [aria-hidden] [ref=f45e29]: ◇
+          - generic [ref=f45e30]:
+            - strong [ref=f45e31]: Productos
+            - generic [ref=f45e32]: Diseños, costos y precios
+          - generic [aria-hidden] [ref=f45e33]: ↗
+        - link "Materia prima Compras y existencias" [ref=f45e34] [cursor=pointer]:
+          - /url: "?page=materials"
+          - generic [aria-hidden] [ref=f45e35]: ▦
+          - generic [ref=f45e36]:
+            - strong [ref=f45e37]: Materia prima
+            - generic [ref=f45e38]: Compras y existencias
+          - generic [aria-hidden] [ref=f45e39]: ↗
+    - generic [ref=f45e40]:
+      - generic [ref=f45e41]:
+        - heading "Administración" [level=2] [ref=f45e42]
+        - generic [ref=f45e43]: 2 módulos
+      - generic [ref=f45e44]:
+        - link "Vendedores Salarios y equipo de ventas" [ref=f45e45] [cursor=pointer]:
+          - /url: "?page=sellers"
+          - generic [aria-hidden] [ref=f45e46]: ♙
+          - generic [ref=f45e47]:
+            - strong [ref=f45e48]: Vendedores
+            - generic [ref=f45e49]: Salarios y equipo de ventas
+          - generic [aria-hidden] [ref=f45e50]: ↗
+        - link "Usuarios Cuentas y accesos" [ref=f45e51] [cursor=pointer]:
+          - /url: "?page=users"
+          - generic [aria-hidden] [ref=f45e52]: ◉
+          - generic [ref=f45e53]:
+            - strong [ref=f45e54]: Usuarios
+            - generic [ref=f45e55]: Cuentas y accesos
+          - generic [aria-hidden] [ref=f45e56]: ↗
+    - generic [ref=f45e57]:
+      - generic [ref=f45e58]:
+        - heading "Reportes" [level=2] [ref=f45e59]
+        - generic [ref=f45e60]: 4 módulos
+      - generic [ref=f45e61]:
+        - link "Ventas por vendedor Cobros, salarios y comisiones" [ref=f45e62] [cursor=pointer]:
+          - /url: "?page=sales_sellers"
+          - generic [aria-hidden] [ref=f45e63]: ▥
+          - generic [ref=f45e64]:
+            - strong [ref=f45e65]: Ventas por vendedor
+            - generic [ref=f45e66]: Cobros, salarios y comisiones
+          - generic [aria-hidden] [ref=f45e67]: ↗
+        - link "Ventas generales Pedidos y cobros" [ref=f45e68] [cursor=pointer]:
+          - /url: "?page=sales_general"
+          - generic [aria-hidden] [ref=f45e69]: ▤
+          - generic [ref=f45e70]:
+            - strong [ref=f45e71]: Ventas generales
+            - generic [ref=f45e72]: Pedidos y cobros
+          - generic [aria-hidden] [ref=f45e73]: ↗
+        - link "Compras de materia prima Entradas y costos" [ref=f45e74] [cursor=pointer]:
+          - /url: "?page=material_purchases"
+          - generic [aria-hidden] [ref=f45e75]: ▦
+          - generic [ref=f45e76]:
+            - strong [ref=f45e77]: Compras de materia prima
+            - generic [ref=f45e78]: Entradas y costos
+          - generic [aria-hidden] [ref=f45e79]: ↗
+        - link "Reporte de clientes Pedidos por cliente" [ref=f45e80] [cursor=pointer]:
+          - /url: "?page=customer_report"
+          - generic [aria-hidden] [ref=f45e81]: ◎
+          - generic [ref=f45e82]:
+            - strong [ref=f45e83]: Reporte de clientes
+            - generic [ref=f45e84]: Pedidos por cliente
+          - generic [aria-hidden] [ref=f45e85]: ↗
+  - dialog "Ventas por vendedor" [ref=f45e91]:
+    - generic [ref=f45e92]:
+      - heading "Ventas por vendedor" [level=2] [ref=f45e93]
+      - button "Cerrar" [active] [ref=f45e94] [cursor=pointer]
+    - iframe [ref=f45e95]:
+      - main [ref=f47e2]:
+        - heading "Ventas por vendedor" [level=1] [ref=f47e4]
+        - generic [ref=f47e5]:
+          - generic [ref=f47e6]:
+            - generic [ref=f47e7]:
+              - text: Mes
+              - textbox "Mes" [ref=f47e8]: 2026-11
+            - button "Consultar" [ref=f47e9] [cursor=pointer]
+          - paragraph [ref=f47e10]: Cobros aprobados durante el mes seleccionado.
+          - generic [ref=f47e11]:
+            - generic [ref=f47e12]:
+              - text: Buscar
+              - searchbox "Buscar" [ref=f47e13]
+            - generic [ref=f47e14]:
+              - text: Filtrar por columna
+              - combobox "Filtrar por columna" [ref=f47e15]:
+                - option "Todas las columnas" [selected]
+                - option "Vendedor"
+                - option "Cobros validados"
+                - option "Salario"
+                - option "Comisión"
+                - option "Liquidación"
+            - generic [ref=f47e16]: 1 de 1 registros
+          - table [ref=f47e18]:
+            - rowgroup [ref=f47e19]:
+              - row [ref=f47e20]:
+                - columnheader "Vendedor" [ref=f47e21]
+                - columnheader "Cobros validados" [ref=f47e22]
+                - columnheader "Salario" [ref=f47e23]
+                - columnheader "Comisión" [ref=f47e24]
+                - columnheader "Liquidación" [ref=f47e25]
+            - rowgroup [ref=f47e26]:
+              - row [ref=f47e27]:
+                - cell "Vendedor de prueba" [ref=f47e28]
+                - cell "Gs. 3.000.000" [ref=f47e29]
+                - cell "Gs. 600.000" [ref=f47e30]
+                - cell "Gs. 105.000" [ref=f47e31]
+                - cell "Gs. 705.000" [ref=f47e32]

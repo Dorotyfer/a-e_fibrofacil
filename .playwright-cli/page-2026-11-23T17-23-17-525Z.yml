@@ -1,0 +1,138 @@
+- generic [ref=f53e1]:
+  - banner [ref=f53e2]:
+    - link "Fibrofácil" [ref=f53e3] [cursor=pointer]:
+      - /url: "?page=home"
+      - generic [aria-hidden] [ref=f53e4]: F
+      - text: Fibrofácil
+    - generic [ref=f53e5]:
+      - strong [ref=f53e6]: Vendedor de prueba
+      - generic [ref=f53e7]: Vendedor
+    - button "Cerrar sesión" [ref=f53e9] [cursor=pointer]
+  - navigation "Módulos" [ref=f53e10]:
+    - generic [ref=f53e11]:
+      - generic [ref=f53e12]:
+        - heading "Trabajo diario" [level=2] [ref=f53e13]
+        - generic [ref=f53e14]: 3 módulos
+      - generic [ref=f53e15]:
+        - link "Pedidos Ventas, pagos y entregas" [ref=f53e16] [cursor=pointer]:
+          - /url: "?page=orders"
+          - generic [aria-hidden] [ref=f53e17]: ▤
+          - generic [ref=f53e18]:
+            - strong [ref=f53e19]: Pedidos
+            - generic [ref=f53e20]: Ventas, pagos y entregas
+          - generic [aria-hidden] [ref=f53e21]: ↗
+        - link "Clientes Datos y contactos" [ref=f53e22] [cursor=pointer]:
+          - /url: "?page=customers"
+          - generic [aria-hidden] [ref=f53e23]: ◎
+          - generic [ref=f53e24]:
+            - strong [ref=f53e25]: Clientes
+            - generic [ref=f53e26]: Datos y contactos
+          - generic [aria-hidden] [ref=f53e27]: ↗
+        - link "Productos Diseños, costos y precios" [ref=f53e28] [cursor=pointer]:
+          - /url: "?page=products"
+          - generic [aria-hidden] [ref=f53e29]: ◇
+          - generic [ref=f53e30]:
+            - strong [ref=f53e31]: Productos
+            - generic [ref=f53e32]: Diseños, costos y precios
+          - generic [aria-hidden] [ref=f53e33]: ↗
+    - generic [ref=f53e34]:
+      - generic [ref=f53e35]:
+        - heading "Administración" [level=2] [ref=f53e36]
+        - generic [ref=f53e37]: 2 módulos
+      - generic [ref=f53e38]:
+        - link "Ventas Registrar ventas y gestionar entregas" [ref=f53e39] [cursor=pointer]:
+          - /url: "?page=sales"
+          - generic [aria-hidden] [ref=f53e40]: ▤
+          - generic [ref=f53e41]:
+            - strong [ref=f53e42]: Ventas
+            - generic [ref=f53e43]: Registrar ventas y gestionar entregas
+          - generic [aria-hidden] [ref=f53e44]: ↗
+        - link "Facturación Preparar y registrar una venta" [ref=f53e45] [cursor=pointer]:
+          - /url: "?page=billing"
+          - generic [aria-hidden] [ref=f53e46]: ▤
+          - generic [ref=f53e47]:
+            - strong [ref=f53e48]: Facturación
+            - generic [ref=f53e49]: Preparar y registrar una venta
+          - generic [aria-hidden] [ref=f53e50]: ↗
+  - dialog "Facturación" [ref=f53e51]:
+    - generic [ref=f53e52]:
+      - heading "Facturación" [level=2] [ref=f53e53]
+      - button "Cerrar" [ref=f53e54] [cursor=pointer]
+    - iframe [active] [ref=f53e55]:
+      - main [ref=f54e2]:
+        - heading "Facturación" [level=1] [ref=f54e4]
+        - generic [ref=f54e5]:
+          - generic [ref=f54e6]:
+            - heading "Cliente" [level=2] [ref=f54e7]
+            - generic [ref=f54e8]:
+              - text: Seleccionar cliente
+              - combobox "Seleccionar cliente" [ref=f54e9]:
+                - option "Selecciona un cliente" [selected]
+            - paragraph [ref=f54e10]: Registra un cliente en el módulo Clientes para continuar.
+          - generic [ref=f54e11]:
+            - generic [ref=f54e12]:
+              - heading "Productos disponibles" [level=2] [ref=f54e13]
+              - generic [ref=f54e14]:
+                - text: Buscar producto
+                - searchbox "Buscar producto" [ref=f54e15]
+            - table [ref=f54e17]:
+              - rowgroup [ref=f54e18]:
+                - row [ref=f54e19]:
+                  - columnheader "Producto" [ref=f54e20]
+                  - columnheader "Categoría" [ref=f54e21]
+                  - columnheader "Tamaño" [ref=f54e22]
+                  - columnheader "Minorista" [ref=f54e23]
+                  - columnheader "Mayorista" [ref=f54e24]
+                  - columnheader [ref=f54e25]
+              - rowgroup [ref=f54e26]:
+                - row [ref=f54e27]:
+                  - cell "Producto de prueba" [ref=f54e28]
+                  - cell "Pruebas" [ref=f54e29]
+                  - cell "10 x 10 cm" [ref=f54e30]
+                  - cell "Gs. 3.000.000" [ref=f54e31]
+                  - cell "—" [ref=f54e32]
+                  - cell [ref=f54e33]:
+                    - button "Añadir" [active] [ref=f54e34] [cursor=pointer]
+          - generic [ref=f54e35]:
+            - heading "Detalle de la venta" [level=2] [ref=f54e36]
+            - table [ref=f54e38]:
+              - rowgroup [ref=f54e39]:
+                - row [ref=f54e40]:
+                  - columnheader "Producto" [ref=f54e41]
+                  - columnheader "Precio" [ref=f54e42]
+                  - columnheader "Cantidad" [ref=f54e43]
+                  - columnheader "Importe" [ref=f54e44]
+                  - columnheader [ref=f54e45]
+              - rowgroup [ref=f54e62]:
+                - row [ref=f54e63]:
+                  - cell "Producto de prueba · 10 x 10 cm" [ref=f54e64]
+                  - cell [ref=f54e65]:
+                    - generic [ref=f54e66]:
+                      - generic [ref=f54e67]: Tipo de precio
+                      - combobox "Tipo de precio" [ref=f54e68]:
+                        - option "Minorista" [selected]
+                        - option "Mayorista" [disabled]
+                  - cell [ref=f54e69]:
+                    - generic [ref=f54e70]:
+                      - generic [ref=f54e71]: Cantidad
+                      - spinbutton "Cantidad" [ref=f54e72]: "1"
+                  - cell [ref=f54e73]:
+                    - status [ref=f54e74]: Gs. 3.000.000
+                  - cell [ref=f54e75]:
+                    - button "Quitar" [ref=f54e76] [cursor=pointer]
+          - generic [ref=f54e47]:
+            - generic [ref=f54e48]:
+              - generic [ref=f54e49]:
+                - text: Comprobante de la seña (PDF, JPG o PNG · hasta 5 MB)
+                - button "Comprobante de la seña (PDF, JPG o PNG · hasta 5 MB)" [ref=f54e50]
+              - generic [ref=f54e51]:
+                - generic [ref=f54e52]:
+                  - term [ref=f54e53]: Seña (50 %)
+                  - definition [ref=f54e54]: Gs. 1.500.000
+                - generic [ref=f54e55]:
+                  - term [ref=f54e56]: Saldo
+                  - definition [ref=f54e57]: Gs. 1.500.000
+                - generic [ref=f54e58]:
+                  - term [ref=f54e59]: Total
+                  - definition [ref=f54e60]: Gs. 3.000.000
+            - button "Enviar a revisión" [ref=f54e61] [cursor=pointer]

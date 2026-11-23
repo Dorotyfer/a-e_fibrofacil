@@ -1,19 +1,50 @@
 <?php
 
-function saveSeller(PDO $db, array $input): void {
+function saveUser(PDO $db, array $input): void {
   $id = integer($input['id'] ?? 0, 0);
   $name = field($input, 'nombre', 120);
   $username = field($input, 'usuario', 80);
+  $role = $input['role'] ?? '';
+  if (!in_array($role, ['admin', 'seller'], true)) {
+    throw new DomainException('Selecciona un rol válido.');
+  }
   $password = $input['password'] ?? '';
   if (!is_string($password) || ((!$id || $password !== '') && (strlen($password) < 12 || strlen($password) > 72))) {
     throw new DomainException('La contraseña debe tener entre 12 y 72 bytes.');
   }
   $hash = $password === '' ? null : password_hash($password, PASSWORD_DEFAULT);
   if ($id) {
-    query($db, "UPDATE users SET name=?, username=?, password=COALESCE(?,password) WHERE id=? AND role='seller'", [$name, $username, $hash, $id]);
+    $existing = query($db, 'SELECT role FROM users WHERE id=?', [$id])->fetch();
+    if (!$existing) {
+      throw new DomainException('Usuario inexistente.');
+    }
+    if ($existing['role'] !== $role) {
+      throw new DomainException('El rol de una cuenta existente no se puede cambiar.');
+    }
+    query($db, 'UPDATE users SET name=?, username=?, password=COALESCE(?,password) WHERE id=?', [$name, $username, $hash, $id]);
   } else {
-    query($db, "INSERT INTO users (name,username,password,role) VALUES (?,?,?,'seller')", [$name, $username, $hash]);
+    query($db, 'INSERT INTO users (name,username,password,role) VALUES (?,?,?,?)', [$name, $username, $hash, $role]);
   }
+}
+
+function setUserActive(PDO $db, int $id, int $actor, bool $active): void {
+  atomic($db, function () use ($db, $id, $actor, $active) {
+    $admins = query($db, "SELECT id,active FROM users WHERE role='admin' ORDER BY id FOR UPDATE")->fetchAll();
+    $account = query($db, 'SELECT id,role,active FROM users WHERE id=? FOR UPDATE', [$id])->fetch();
+    if (!$account) {
+      throw new DomainException('Usuario inexistente.');
+    }
+    if (!$active && $id === $actor) {
+      throw new DomainException('No puedes desactivar tu propia cuenta.');
+    }
+    if (!$active && $account['role'] === 'admin' && $account['active'] &&
+        count(array_filter($admins, fn ($admin) => $admin['active'])) <= 1) {
+      throw new DomainException('Debe quedar al menos un administrador activo.');
+    }
+    if ((bool) $account['active'] !== $active) {
+      query($db, 'UPDATE users SET active=?, session_version=session_version+1 WHERE id=?', [(int) $active, $id]);
+    }
+  });
 }
 
 function saveSalary(PDO $db, array $input): void {

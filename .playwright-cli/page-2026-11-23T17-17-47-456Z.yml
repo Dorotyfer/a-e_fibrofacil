@@ -1,0 +1,48 @@
+- generic [active] [ref=f50e1]:
+  - banner [ref=f50e2]:
+    - link "Fibrofácil" [ref=f50e3] [cursor=pointer]:
+      - /url: "?page=home"
+      - generic [aria-hidden] [ref=f50e4]: F
+      - text: Fibrofácil
+    - generic [ref=f50e5]:
+      - strong [ref=f50e6]: Vendedor de prueba
+      - generic [ref=f50e7]: Vendedor
+    - button "Cerrar sesión" [ref=f50e9] [cursor=pointer]
+  - navigation "Módulos" [ref=f50e10]:
+    - generic [ref=f50e11]:
+      - generic [ref=f50e12]:
+        - heading "Trabajo diario" [level=2] [ref=f50e13]
+        - generic [ref=f50e14]: 3 módulos
+      - generic [ref=f50e15]:
+        - link "Pedidos Ventas, pagos y entregas" [ref=f50e16] [cursor=pointer]:
+          - /url: "?page=orders"
+          - generic [aria-hidden] [ref=f50e17]: ▤
+          - generic [ref=f50e18]:
+            - strong [ref=f50e19]: Pedidos
+            - generic [ref=f50e20]: Ventas, pagos y entregas
+          - generic [aria-hidden] [ref=f50e21]: ↗
+        - link "Clientes Datos y contactos" [ref=f50e22] [cursor=pointer]:
+          - /url: "?page=customers"
+          - generic [aria-hidden] [ref=f50e23]: ◎
+          - generic [ref=f50e24]:
+            - strong [ref=f50e25]: Clientes
+            - generic [ref=f50e26]: Datos y contactos
+          - generic [aria-hidden] [ref=f50e27]: ↗
+        - link "Productos Diseños, costos y precios" [ref=f50e28] [cursor=pointer]:
+          - /url: "?page=products"
+          - generic [aria-hidden] [ref=f50e29]: ◇
+          - generic [ref=f50e30]:
+            - strong [ref=f50e31]: Productos
+            - generic [ref=f50e32]: Diseños, costos y precios
+          - generic [aria-hidden] [ref=f50e33]: ↗
+    - generic [ref=f50e34]:
+      - generic [ref=f50e35]:
+        - heading "Administración" [level=2] [ref=f50e36]
+        - generic [ref=f50e37]: 1 módulos
+      - link "Ventas Registrar ventas y gestionar entregas" [ref=f50e39] [cursor=pointer]:
+        - /url: "?page=sales"
+        - generic [aria-hidden] [ref=f50e40]: ▤
+        - generic [ref=f50e41]:
+          - strong [ref=f50e42]: Ventas
+          - generic [ref=f50e43]: Registrar ventas y gestionar entregas
+        - generic [aria-hidden] [ref=f50e44]: ↗

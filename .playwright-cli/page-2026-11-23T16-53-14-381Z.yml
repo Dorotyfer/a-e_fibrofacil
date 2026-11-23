@@ -1,0 +1,57 @@
+- generic [active] [ref=f33e1]:
+  - complementary [ref=f33e2]:
+    - link "Fibrofácil" [ref=f33e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f33e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f33e5]:
+      - link "Pedidos" [ref=f33e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f33e7] [cursor=pointer]:
+        - /url: "?page=products"
+      - link "Materia prima" [ref=f33e8] [cursor=pointer]:
+        - /url: "?page=materials"
+      - link "Vendedores" [ref=f33e9] [cursor=pointer]:
+        - /url: "?page=sellers"
+      - link "Usuarios" [ref=f33e10] [cursor=pointer]:
+        - /url: "?page=users"
+      - link "Reportes" [ref=f33e11] [cursor=pointer]:
+        - /url: "?page=reports"
+    - generic [ref=f33e12]:
+      - strong [ref=f33e13]: Administración
+      - generic [ref=f33e14]: Administrador
+      - button "Cerrar sesión" [ref=f33e16] [cursor=pointer]
+  - main [ref=f33e17]:
+    - heading "Pedidos" [level=1] [ref=f33e19]
+    - generic [ref=f33e20]:
+      - generic [ref=f33e21]:
+        - generic [ref=f33e22]:
+          - text: Estado
+          - combobox "Estado" [ref=f33e23]:
+            - option "Todos" [selected]
+            - option "En revisión"
+            - option "Pendiente"
+            - option "Falta material"
+            - option "Entregado"
+        - button "Filtrar" [ref=f33e24] [cursor=pointer]
+      - table [ref=f33e26]:
+        - rowgroup [ref=f33e27]:
+          - row [ref=f33e28]:
+            - columnheader "Pedido" [ref=f33e29]
+            - columnheader "Cliente" [ref=f33e30]
+            - columnheader "Vendedor" [ref=f33e31]
+            - columnheader "Fecha" [ref=f33e32]
+            - columnheader "Total" [ref=f33e33]
+            - columnheader "Estado" [ref=f33e34]
+            - columnheader "Último cobro" [ref=f33e35]
+        - rowgroup [ref=f33e36]:
+          - row [ref=f33e37]:
+            - cell [ref=f33e38]:
+              - link "#1" [ref=f33e39] [cursor=pointer]:
+                - /url: "?page=orders&id=1"
+            - cell "Cliente de prueba" [ref=f33e40]
+            - cell "Vendedor de prueba" [ref=f33e41]
+            - cell "2026-11-23 13:38:19" [ref=f33e42]
+            - cell "Gs. 3.000.000" [ref=f33e43]
+            - cell "Entregado" [ref=f33e44]
+            - cell "Aprobado" [ref=f33e46]

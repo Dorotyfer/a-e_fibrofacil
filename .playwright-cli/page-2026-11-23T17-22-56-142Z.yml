@@ -1,0 +1,56 @@
+- generic [active] [ref=f53e1]:
+  - banner [ref=f53e2]:
+    - link "Fibrofácil" [ref=f53e3] [cursor=pointer]:
+      - /url: "?page=home"
+      - generic [aria-hidden] [ref=f53e4]: F
+      - text: Fibrofácil
+    - generic [ref=f53e5]:
+      - strong [ref=f53e6]: Vendedor de prueba
+      - generic [ref=f53e7]: Vendedor
+    - button "Cerrar sesión" [ref=f53e9] [cursor=pointer]
+  - navigation "Módulos" [ref=f53e10]:
+    - generic [ref=f53e11]:
+      - generic [ref=f53e12]:
+        - heading "Trabajo diario" [level=2] [ref=f53e13]
+        - generic [ref=f53e14]: 3 módulos
+      - generic [ref=f53e15]:
+        - link "Pedidos Ventas, pagos y entregas" [ref=f53e16] [cursor=pointer]:
+          - /url: "?page=orders"
+          - generic [aria-hidden] [ref=f53e17]: ▤
+          - generic [ref=f53e18]:
+            - strong [ref=f53e19]: Pedidos
+            - generic [ref=f53e20]: Ventas, pagos y entregas
+          - generic [aria-hidden] [ref=f53e21]: ↗
+        - link "Clientes Datos y contactos" [ref=f53e22] [cursor=pointer]:
+          - /url: "?page=customers"
+          - generic [aria-hidden] [ref=f53e23]: ◎
+          - generic [ref=f53e24]:
+            - strong [ref=f53e25]: Clientes
+            - generic [ref=f53e26]: Datos y contactos
+          - generic [aria-hidden] [ref=f53e27]: ↗
+        - link "Productos Diseños, costos y precios" [ref=f53e28] [cursor=pointer]:
+          - /url: "?page=products"
+          - generic [aria-hidden] [ref=f53e29]: ◇
+          - generic [ref=f53e30]:
+            - strong [ref=f53e31]: Productos
+            - generic [ref=f53e32]: Diseños, costos y precios
+          - generic [aria-hidden] [ref=f53e33]: ↗
+    - generic [ref=f53e34]:
+      - generic [ref=f53e35]:
+        - heading "Administración" [level=2] [ref=f53e36]
+        - generic [ref=f53e37]: 2 módulos
+      - generic [ref=f53e38]:
+        - link "Ventas Registrar ventas y gestionar entregas" [ref=f53e39] [cursor=pointer]:
+          - /url: "?page=sales"
+          - generic [aria-hidden] [ref=f53e40]: ▤
+          - generic [ref=f53e41]:
+            - strong [ref=f53e42]: Ventas
+            - generic [ref=f53e43]: Registrar ventas y gestionar entregas
+          - generic [aria-hidden] [ref=f53e44]: ↗
+        - link "Facturación Preparar y registrar una venta" [ref=f53e45] [cursor=pointer]:
+          - /url: "?page=billing"
+          - generic [aria-hidden] [ref=f53e46]: ▤
+          - generic [ref=f53e47]:
+            - strong [ref=f53e48]: Facturación
+            - generic [ref=f53e49]: Preparar y registrar una venta
+          - generic [aria-hidden] [ref=f53e50]: ↗

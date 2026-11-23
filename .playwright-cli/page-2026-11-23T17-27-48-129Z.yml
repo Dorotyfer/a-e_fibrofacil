@@ -1,0 +1,110 @@
+- generic [active] [ref=f59e1]:
+  - banner [ref=f59e2]:
+    - link "Fibrofácil" [ref=f59e3] [cursor=pointer]:
+      - /url: "?page=home"
+      - generic [aria-hidden] [ref=f59e4]: F
+      - text: Fibrofácil
+    - generic [ref=f59e5]:
+      - strong [ref=f59e6]: Administración
+      - generic [ref=f59e7]: Administrador
+    - button "Cerrar sesión" [ref=f59e9] [cursor=pointer]
+  - navigation "Módulos" [ref=f59e10]:
+    - generic [ref=f59e11]:
+      - generic [ref=f59e12]:
+        - heading "Trabajo diario" [level=2] [ref=f59e13]
+        - generic [ref=f59e14]: 4 módulos
+      - generic [ref=f59e15]:
+        - link "Pedidos Ventas, pagos y entregas" [ref=f59e16] [cursor=pointer]:
+          - /url: "?page=orders"
+          - generic [aria-hidden] [ref=f59e17]: ▤
+          - generic [ref=f59e18]:
+            - strong [ref=f59e19]: Pedidos
+            - generic [ref=f59e20]: Ventas, pagos y entregas
+          - generic [aria-hidden] [ref=f59e21]: ↗
+        - link "Clientes Datos y contactos" [ref=f59e22] [cursor=pointer]:
+          - /url: "?page=customers"
+          - generic [aria-hidden] [ref=f59e23]: ◎
+          - generic [ref=f59e24]:
+            - strong [ref=f59e25]: Clientes
+            - generic [ref=f59e26]: Datos y contactos
+          - generic [aria-hidden] [ref=f59e27]: ↗
+        - link "Productos Diseños, costos y precios" [ref=f59e28] [cursor=pointer]:
+          - /url: "?page=products"
+          - generic [aria-hidden] [ref=f59e29]: ◇
+          - generic [ref=f59e30]:
+            - strong [ref=f59e31]: Productos
+            - generic [ref=f59e32]: Diseños, costos y precios
+          - generic [aria-hidden] [ref=f59e33]: ↗
+        - link "Materia prima Compras y existencias" [ref=f59e34] [cursor=pointer]:
+          - /url: "?page=materials"
+          - generic [aria-hidden] [ref=f59e35]: ▦
+          - generic [ref=f59e36]:
+            - strong [ref=f59e37]: Materia prima
+            - generic [ref=f59e38]: Compras y existencias
+          - generic [aria-hidden] [ref=f59e39]: ↗
+    - generic [ref=f59e40]:
+      - generic [ref=f59e41]:
+        - heading "Administración" [level=2] [ref=f59e42]
+        - generic [ref=f59e43]: 4 módulos
+      - generic [ref=f59e44]:
+        - link "Ventas Registrar ventas y gestionar entregas" [ref=f59e45] [cursor=pointer]:
+          - /url: "?page=sales"
+          - generic [aria-hidden] [ref=f59e46]: ▤
+          - generic [ref=f59e47]:
+            - strong [ref=f59e48]: Ventas
+            - generic [ref=f59e49]: Registrar ventas y gestionar entregas
+          - generic [aria-hidden] [ref=f59e50]: ↗
+        - link "Facturación Preparar y registrar una venta" [ref=f59e51] [cursor=pointer]:
+          - /url: "?page=billing"
+          - generic [aria-hidden] [ref=f59e52]: ▤
+          - generic [ref=f59e53]:
+            - strong [ref=f59e54]: Facturación
+            - generic [ref=f59e55]: Preparar y registrar una venta
+          - generic [aria-hidden] [ref=f59e56]: ↗
+        - link "Vendedores Salarios y equipo de ventas" [ref=f59e57] [cursor=pointer]:
+          - /url: "?page=sellers"
+          - generic [aria-hidden] [ref=f59e58]: ♙
+          - generic [ref=f59e59]:
+            - strong [ref=f59e60]: Vendedores
+            - generic [ref=f59e61]: Salarios y equipo de ventas
+          - generic [aria-hidden] [ref=f59e62]: ↗
+        - link "Usuarios Cuentas y accesos" [ref=f59e63] [cursor=pointer]:
+          - /url: "?page=users"
+          - generic [aria-hidden] [ref=f59e64]: ◉
+          - generic [ref=f59e65]:
+            - strong [ref=f59e66]: Usuarios
+            - generic [ref=f59e67]: Cuentas y accesos
+          - generic [aria-hidden] [ref=f59e68]: ↗
+    - generic [ref=f59e69]:
+      - generic [ref=f59e70]:
+        - heading "Reportes" [level=2] [ref=f59e71]
+        - generic [ref=f59e72]: 4 módulos
+      - generic [ref=f59e73]:
+        - link "Ventas por vendedor Cobros, salarios y comisiones" [ref=f59e74] [cursor=pointer]:
+          - /url: "?page=sales_sellers"
+          - generic [aria-hidden] [ref=f59e75]: ▥
+          - generic [ref=f59e76]:
+            - strong [ref=f59e77]: Ventas por vendedor
+            - generic [ref=f59e78]: Cobros, salarios y comisiones
+          - generic [aria-hidden] [ref=f59e79]: ↗
+        - link "Ventas generales Pedidos y cobros" [ref=f59e80] [cursor=pointer]:
+          - /url: "?page=sales_general"
+          - generic [aria-hidden] [ref=f59e81]: ▤
+          - generic [ref=f59e82]:
+            - strong [ref=f59e83]: Ventas generales
+            - generic [ref=f59e84]: Pedidos y cobros
+          - generic [aria-hidden] [ref=f59e85]: ↗
+        - link "Compras de materia prima Entradas y costos" [ref=f59e86] [cursor=pointer]:
+          - /url: "?page=material_purchases"
+          - generic [aria-hidden] [ref=f59e87]: ▦
+          - generic [ref=f59e88]:
+            - strong [ref=f59e89]: Compras de materia prima
+            - generic [ref=f59e90]: Entradas y costos
+          - generic [aria-hidden] [ref=f59e91]: ↗
+        - link "Reporte de clientes Pedidos por cliente" [ref=f59e92] [cursor=pointer]:
+          - /url: "?page=customer_report"
+          - generic [aria-hidden] [ref=f59e93]: ◎
+          - generic [ref=f59e94]:
+            - strong [ref=f59e95]: Reporte de clientes
+            - generic [ref=f59e96]: Pedidos por cliente
+          - generic [aria-hidden] [ref=f59e97]: ↗

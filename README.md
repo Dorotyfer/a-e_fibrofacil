@@ -29,3 +29,7 @@ Sistema interno de taller para XAMPP. Requiere PHP 8.2 con las extensiones `pdo_
 ## Verificación
 
 `C:/xampp/php/php.exe tests/domain.php` verifica geometría, comisiones y redondeo de pagos.
+
+Para actualizar una instalación anterior con la gestión de estado de usuarios, ejecuta `C:/xampp/php/php.exe migrate-users.php` desde la carpeta del proyecto. Los usuarios existentes quedan activos.
+
+Para agregar el módulo de clientes a una instalación anterior, ejecuta `C:/xampp/php/php.exe migrate-customers.php`. Los pedidos anteriores conservan el nombre del cliente registrado.

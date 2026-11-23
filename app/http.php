@@ -49,15 +49,22 @@ function handlePost(PDO $db, ?array $user, array $input, array $files): never {
   $page = match ($action) {
     'mdf', 'purchase', 'adjustment' => 'materials',
     'product' => 'products',
-    'seller', 'salary' => 'sellers',
+    'customer' => 'customers',
+    'user', 'user_status' => 'users',
+    'salary' => 'sellers',
     'order', 'review', 'proof', 'retry' => 'orders',
     default => '',
   };
+  if (in_array($action, ['order', 'proof'], true)) {
+    $page = 'sales';
+  }
   if ($page === '') {
     http_response_code(400);
     exit('Acción desconocida.');
   }
-  requireRole($user, in_array($action, ['order', 'proof'], true) ? 'seller' : 'admin');
+  if (!in_array($action, ['customer', 'order', 'proof'], true)) {
+    requireRole($user, 'admin');
+  }
   $target = '?page=' . $page;
   $id = filter_var($input['id'] ?? null, FILTER_VALIDATE_INT);
   if ($id && in_array($action, ['review', 'proof', 'retry'], true)) {
@@ -77,8 +84,19 @@ function handlePost(PDO $db, ?array $user, array $input, array $files): never {
       case 'product':
         saveProduct($db, $input, $files);
         break;
-      case 'seller':
-        saveSeller($db, $input);
+      case 'customer':
+        saveCustomer($db, $input);
+        break;
+      case 'user':
+        saveUser($db, $input);
+        break;
+      case 'user_status':
+        $status = $input['active'] ?? '';
+        if (!in_array($status, ['0', '1'], true)) {
+          throw new DomainException('Estado de usuario inválido.');
+        }
+        setUserActive($db, integer($id), $actor, $status === '1');
+        $message = $status === '1' ? 'Usuario reactivado.' : 'Usuario desactivado.';
         break;
       case 'salary':
         saveSalary($db, $input);
@@ -99,7 +117,16 @@ function handlePost(PDO $db, ?array $user, array $input, array $files): never {
     }
     flash($message);
   } catch (DomainException $error) {
+    if ($action === 'order' && ($input['origin'] ?? '') === 'billing') {
+      $target = '?page=billing';
+    }
     if ($action === 'product') {
+      $target .= $id ? '&edit=' . $id : '&new=1';
+    }
+    if ($action === 'user' && $id) {
+      $target .= '&edit=' . $id;
+    }
+    if ($action === 'customer') {
       $target .= $id ? '&edit=' . $id : '&new=1';
     }
     flash($error->getMessage(), true);
@@ -116,15 +143,15 @@ function signIn(PDO $db, array $input): never {
   $username = $input['username'] ?? '';
   $pass = $input['password'] ?? '';
   $account = is_string($username) && is_string($pass) && strlen($username) <= 320 && strlen($pass) <= 72
-    ? query($db, 'SELECT id,password FROM users WHERE username=?', [trim($username)])->fetch() : null;
-  if (!$account || !password_verify($pass, $account['password'])) {
+    ? query($db, 'SELECT id,password,active,session_version FROM users WHERE username=?', [trim($username)])->fetch() : null;
+  if (!$account || !$account['active'] || !password_verify($pass, $account['password'])) {
     usleep(400000);
     flash('Usuario o contraseña incorrectos.', true);
     redirectTo('?page=login');
   }
   session_regenerate_id(true);
-  $_SESSION = ['user_id' => $account['id']];
-  redirectTo('?page=orders');
+  $_SESSION = ['user_id' => $account['id'], 'session_version' => $account['session_version']];
+  redirectTo('?page=home');
 }
 
 function downloadProof(PDO $db, array $user, int $id): never {

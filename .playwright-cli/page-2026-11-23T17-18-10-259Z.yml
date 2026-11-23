@@ -1,0 +1,141 @@
+- generic [ref=f50e1]:
+  - banner [ref=f50e2]:
+    - link "Fibrofácil" [ref=f50e3] [cursor=pointer]:
+      - /url: "?page=home"
+      - generic [aria-hidden] [ref=f50e4]: F
+      - text: Fibrofácil
+    - generic [ref=f50e5]:
+      - strong [ref=f50e6]: Vendedor de prueba
+      - generic [ref=f50e7]: Vendedor
+    - button "Cerrar sesión" [ref=f50e9] [cursor=pointer]
+  - navigation "Módulos" [ref=f50e10]:
+    - generic [ref=f50e11]:
+      - generic [ref=f50e12]:
+        - heading "Trabajo diario" [level=2] [ref=f50e13]
+        - generic [ref=f50e14]: 3 módulos
+      - generic [ref=f50e15]:
+        - link "Pedidos Ventas, pagos y entregas" [ref=f50e16] [cursor=pointer]:
+          - /url: "?page=orders"
+          - generic [aria-hidden] [ref=f50e17]: ▤
+          - generic [ref=f50e18]:
+            - strong [ref=f50e19]: Pedidos
+            - generic [ref=f50e20]: Ventas, pagos y entregas
+          - generic [aria-hidden] [ref=f50e21]: ↗
+        - link "Clientes Datos y contactos" [ref=f50e22] [cursor=pointer]:
+          - /url: "?page=customers"
+          - generic [aria-hidden] [ref=f50e23]: ◎
+          - generic [ref=f50e24]:
+            - strong [ref=f50e25]: Clientes
+            - generic [ref=f50e26]: Datos y contactos
+          - generic [aria-hidden] [ref=f50e27]: ↗
+        - link "Productos Diseños, costos y precios" [ref=f50e28] [cursor=pointer]:
+          - /url: "?page=products"
+          - generic [aria-hidden] [ref=f50e29]: ◇
+          - generic [ref=f50e30]:
+            - strong [ref=f50e31]: Productos
+            - generic [ref=f50e32]: Diseños, costos y precios
+          - generic [aria-hidden] [ref=f50e33]: ↗
+    - generic [ref=f50e34]:
+      - generic [ref=f50e35]:
+        - heading "Administración" [level=2] [ref=f50e36]
+        - generic [ref=f50e37]: 1 módulos
+      - link "Ventas Registrar ventas y gestionar entregas" [ref=f50e39] [cursor=pointer]:
+        - /url: "?page=sales"
+        - generic [aria-hidden] [ref=f50e40]: ▤
+        - generic [ref=f50e41]:
+          - strong [ref=f50e42]: Ventas
+          - generic [ref=f50e43]: Registrar ventas y gestionar entregas
+        - generic [aria-hidden] [ref=f50e44]: ↗
+  - dialog "Ventas" [ref=f50e45]:
+    - generic [ref=f50e46]:
+      - heading "Ventas" [level=2] [ref=f50e47]
+      - button "Cerrar" [ref=f50e48] [cursor=pointer]
+    - iframe [active] [ref=f50e49]:
+      - generic [ref=f51e1]:
+        - main [ref=f51e2]:
+          - generic [ref=f51e3]:
+            - heading "Ventas" [level=1] [ref=f51e4]
+            - link "Nueva venta" [ref=f51e5] [cursor=pointer]:
+              - /url: "?page=sales&new=1"
+          - generic [ref=f51e6]:
+            - generic [ref=f51e7]:
+              - generic [ref=f51e8]:
+                - text: Estado
+                - combobox "Estado" [ref=f51e9]:
+                  - option "Todos" [selected]
+                  - option "En revisión"
+                  - option "Pendiente"
+                  - option "Falta material"
+                  - option "Entregado"
+              - button "Filtrar" [ref=f51e10] [cursor=pointer]
+            - generic [ref=f51e11]:
+              - generic [ref=f51e12]:
+                - text: Buscar
+                - searchbox "Buscar" [ref=f51e13]
+              - generic [ref=f51e14]:
+                - text: Filtrar por columna
+                - combobox "Filtrar por columna" [ref=f51e15]:
+                  - option "Todas las columnas" [selected]
+                  - option "Pedido"
+                  - option "Cliente"
+                  - option "Fecha"
+                  - option "Total"
+                  - option "Estado"
+                  - option "Último cobro"
+              - generic [ref=f51e16]: 1 de 1 registros
+            - table [ref=f51e18]:
+              - rowgroup [ref=f51e19]:
+                - row [ref=f51e20]:
+                  - columnheader "Pedido" [ref=f51e21]
+                  - columnheader "Cliente" [ref=f51e22]
+                  - columnheader "Fecha" [ref=f51e23]
+                  - columnheader "Total" [ref=f51e24]
+                  - columnheader "Estado" [ref=f51e25]
+                  - columnheader "Último cobro" [ref=f51e26]
+              - rowgroup [ref=f51e27]:
+                - row [ref=f51e28]:
+                  - cell [ref=f51e29]:
+                    - link "#1" [ref=f51e30] [cursor=pointer]:
+                      - /url: "?page=sales&id=1"
+                  - cell "Cliente de prueba" [ref=f51e31]
+                  - cell "2026-11-23 13:38:19" [ref=f51e32]
+                  - cell "Gs. 3.000.000" [ref=f51e33]
+                  - cell "Entregado" [ref=f51e34]
+                  - cell "Aprobado" [ref=f51e36]
+        - dialog "Nueva venta" [ref=f51e38]:
+          - generic [ref=f51e39]:
+            - heading "Nueva venta" [level=2] [ref=f51e40]
+            - button "Cerrar" [active] [ref=f51e41] [cursor=pointer]
+          - iframe [ref=f51e42]:
+            - main [ref=f52e2]:
+              - link "← Ventas" [ref=f52e3] [cursor=pointer]:
+                - /url: "?page=sales"
+              - heading "Nueva venta" [level=1] [ref=f52e5]
+              - generic [ref=f52e6]:
+                - tablist [ref=f52e7]:
+                  - tab "Detalle del pedido" [selected] [ref=f52e8] [cursor=pointer]
+                  - tab "Comprobante de la seña" [ref=f52e9] [cursor=pointer]
+                - generic [ref=f52e10]:
+                  - heading "Detalle del pedido" [level=2] [ref=f52e11]
+                  - generic [ref=f52e12]:
+                    - text: Cliente
+                    - combobox "Cliente" [ref=f52e13]:
+                      - option "Selecciona un cliente" [selected]
+                  - paragraph [ref=f52e14]: Primero registra el cliente en el módulo Clientes.
+                  - group [ref=f52e16]:
+                    - generic [ref=f52e17]:
+                      - text: Producto
+                      - combobox "Producto" [ref=f52e18]:
+                        - option "Producto de prueba · 10 x 10 cm" [selected]
+                    - generic [ref=f52e19]:
+                      - text: Precio
+                      - combobox "Precio" [ref=f52e20]:
+                        - option "Minorista" [selected]
+                        - option "Mayorista" [disabled]
+                    - generic [ref=f52e21]:
+                      - text: Cantidad
+                      - spinbutton "Cantidad" [ref=f52e22]: "1"
+                    - generic [ref=f52e23]:
+                      - status [ref=f52e24]: Gs. 3.000.000
+                      - button "Quitar" [disabled] [ref=f52e25]
+                  - button "Añadir producto" [ref=f52e27] [cursor=pointer]

@@ -1,0 +1,111 @@
+- generic [ref=f40e1]:
+  - banner [ref=f40e2]:
+    - link "Fibrofácil" [ref=f40e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f40e4]: F
+      - text: Fibrofácil
+    - generic [ref=f40e5]:
+      - strong [ref=f40e6]: Administración
+      - generic [ref=f40e7]: Administrador
+    - button "Cerrar sesión" [ref=f40e9] [cursor=pointer]
+  - navigation "Módulos" [ref=f40e10]:
+    - group [ref=f40e11]:
+      - generic "Menú principal" [ref=f40e12] [cursor=pointer]
+      - generic [ref=f40e13]:
+        - link "Pedidos" [ref=f40e14] [cursor=pointer]:
+          - /url: "?page=orders"
+        - link "Productos" [ref=f40e15] [cursor=pointer]:
+          - /url: "?page=products"
+        - link "Materia prima" [ref=f40e16] [cursor=pointer]:
+          - /url: "?page=materials"
+        - link "Vendedores" [ref=f40e17] [cursor=pointer]:
+          - /url: "?page=sellers"
+        - link "Usuarios" [ref=f40e18] [cursor=pointer]:
+          - /url: "?page=users"
+        - link "Reportes" [ref=f40e19] [cursor=pointer]:
+          - /url: "?page=reports"
+  - main [ref=f40e20]:
+    - generic [ref=f40e21]:
+      - heading "Productos" [level=1] [ref=f40e22]
+      - link "Añadir producto" [ref=f40e23] [cursor=pointer]:
+        - /url: "?page=products&new=1"
+    - generic [ref=f40e24]:
+      - generic [ref=f40e25]:
+        - generic [ref=f40e26]:
+          - text: Buscar
+          - searchbox "Buscar" [ref=f40e27]
+        - generic [ref=f40e28]:
+          - text: Filtrar por columna
+          - combobox "Filtrar por columna" [ref=f40e29]:
+            - option "Todas las columnas" [selected]
+            - option "Producto"
+            - option "Categoría"
+            - option "Tamaño"
+            - option "Costo de producción"
+            - option "Minorista"
+            - option "Mayorista"
+            - option "Diseño"
+        - generic [ref=f40e30]: 1 de 1 registros
+      - table [ref=f40e32]:
+        - rowgroup [ref=f40e33]:
+          - row [ref=f40e34]:
+            - columnheader "Producto" [ref=f40e35]
+            - columnheader "Categoría" [ref=f40e36]
+            - columnheader "Tamaño" [ref=f40e37]
+            - columnheader "Costo de producción" [ref=f40e38]
+            - columnheader "Minorista" [ref=f40e39]
+            - columnheader "Mayorista" [ref=f40e40]
+            - columnheader "Diseño" [ref=f40e41]
+        - rowgroup [ref=f40e42]:
+          - row [ref=f40e43]:
+            - cell [ref=f40e44]:
+              - link "Producto de prueba" [ref=f40e45] [cursor=pointer]:
+                - /url: "?page=products&edit=1"
+            - cell "Pruebas" [ref=f40e46]
+            - cell "10 x 10 cm" [ref=f40e47]
+            - cell "Gs. 1.000" [ref=f40e48]
+            - cell "Gs. 3.000.000" [ref=f40e49]
+            - cell "—" [ref=f40e50]
+            - cell [ref=f40e51]:
+              - link "Descargar PLT" [ref=f40e52] [cursor=pointer]:
+                - /url: "?page=plot&id=1"
+  - dialog "Añadir producto" [ref=f40e53]:
+    - generic [ref=f40e54]:
+      - heading "Añadir producto" [level=2] [ref=f40e55]
+      - button "Cerrar" [active] [ref=f40e56] [cursor=pointer]
+    - iframe [ref=f40e57]:
+      - main [ref=f41e2]:
+        - link "← Productos" [ref=f41e3] [cursor=pointer]:
+          - /url: "?page=products"
+        - heading "Añadir producto" [level=1] [ref=f41e5]
+        - generic [ref=f41e6]:
+          - tablist [ref=f41e7]:
+            - tab "Datos del producto" [selected] [ref=f41e8] [cursor=pointer]
+            - tab "Diseño de corte" [ref=f41e9] [cursor=pointer]
+          - generic [ref=f41e11]:
+            - heading "Datos del producto" [level=2] [ref=f41e12]
+            - generic [ref=f41e13]:
+              - text: Nombre
+              - textbox "Nombre" [ref=f41e14]
+            - generic [ref=f41e15]:
+              - generic [ref=f41e16]:
+                - text: Tamaño comercial
+                - textbox "Tamaño comercial" [ref=f41e17]:
+                  - /placeholder: Ej. 20 × 15 × 8 cm
+              - generic [ref=f41e18]:
+                - text: Categoría
+                - textbox "Categoría" [ref=f41e19]
+            - generic [ref=f41e20]:
+              - text: Espesor de MDF
+              - combobox "Espesor de MDF" [ref=f41e21]:
+                - option "MDF 3 mm" [selected]
+            - generic [ref=f41e22]:
+              - checkbox "Requiere ensamble" [ref=f41e23]
+              - text: Requiere ensamble
+            - generic [ref=f41e24]:
+              - text: Precio minorista (Gs.)
+              - spinbutton "Precio minorista (Gs.)" [ref=f41e25]
+            - generic [ref=f41e26]:
+              - checkbox "Habilitar venta mayorista" [ref=f41e27]
+              - text: Habilitar venta mayorista
+          - button "Guardar producto" [disabled] [ref=f41e29]

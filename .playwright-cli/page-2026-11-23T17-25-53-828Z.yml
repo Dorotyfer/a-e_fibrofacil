@@ -1,0 +1,177 @@
+- generic [ref=f57e1]:
+  - banner [ref=f57e2]:
+    - link "Fibrofácil" [ref=f57e3] [cursor=pointer]:
+      - /url: "?page=home"
+      - generic [aria-hidden] [ref=f57e4]: F
+      - text: Fibrofácil
+    - generic [ref=f57e5]:
+      - strong [ref=f57e6]: Administración
+      - generic [ref=f57e7]: Administrador
+    - button "Cerrar sesión" [ref=f57e9] [cursor=pointer]
+  - navigation "Módulos" [ref=f57e10]:
+    - generic [ref=f57e11]:
+      - generic [ref=f57e12]:
+        - heading "Trabajo diario" [level=2] [ref=f57e13]
+        - generic [ref=f57e14]: 4 módulos
+      - generic [ref=f57e15]:
+        - link "Pedidos Ventas, pagos y entregas" [ref=f57e16] [cursor=pointer]:
+          - /url: "?page=orders"
+          - generic [aria-hidden] [ref=f57e17]: ▤
+          - generic [ref=f57e18]:
+            - strong [ref=f57e19]: Pedidos
+            - generic [ref=f57e20]: Ventas, pagos y entregas
+          - generic [aria-hidden] [ref=f57e21]: ↗
+        - link "Clientes Datos y contactos" [ref=f57e22] [cursor=pointer]:
+          - /url: "?page=customers"
+          - generic [aria-hidden] [ref=f57e23]: ◎
+          - generic [ref=f57e24]:
+            - strong [ref=f57e25]: Clientes
+            - generic [ref=f57e26]: Datos y contactos
+          - generic [aria-hidden] [ref=f57e27]: ↗
+        - link "Productos Diseños, costos y precios" [ref=f57e28] [cursor=pointer]:
+          - /url: "?page=products"
+          - generic [aria-hidden] [ref=f57e29]: ◇
+          - generic [ref=f57e30]:
+            - strong [ref=f57e31]: Productos
+            - generic [ref=f57e32]: Diseños, costos y precios
+          - generic [aria-hidden] [ref=f57e33]: ↗
+        - link "Materia prima Compras y existencias" [ref=f57e34] [cursor=pointer]:
+          - /url: "?page=materials"
+          - generic [aria-hidden] [ref=f57e35]: ▦
+          - generic [ref=f57e36]:
+            - strong [ref=f57e37]: Materia prima
+            - generic [ref=f57e38]: Compras y existencias
+          - generic [aria-hidden] [ref=f57e39]: ↗
+    - generic [ref=f57e40]:
+      - generic [ref=f57e41]:
+        - heading "Administración" [level=2] [ref=f57e42]
+        - generic [ref=f57e43]: 4 módulos
+      - generic [ref=f57e44]:
+        - link "Ventas Registrar ventas y gestionar entregas" [ref=f57e45] [cursor=pointer]:
+          - /url: "?page=sales"
+          - generic [aria-hidden] [ref=f57e46]: ▤
+          - generic [ref=f57e47]:
+            - strong [ref=f57e48]: Ventas
+            - generic [ref=f57e49]: Registrar ventas y gestionar entregas
+          - generic [aria-hidden] [ref=f57e50]: ↗
+        - link "Facturación Preparar y registrar una venta" [ref=f57e51] [cursor=pointer]:
+          - /url: "?page=billing"
+          - generic [aria-hidden] [ref=f57e52]: ▤
+          - generic [ref=f57e53]:
+            - strong [ref=f57e54]: Facturación
+            - generic [ref=f57e55]: Preparar y registrar una venta
+          - generic [aria-hidden] [ref=f57e56]: ↗
+        - link "Vendedores Salarios y equipo de ventas" [ref=f57e57] [cursor=pointer]:
+          - /url: "?page=sellers"
+          - generic [aria-hidden] [ref=f57e58]: ♙
+          - generic [ref=f57e59]:
+            - strong [ref=f57e60]: Vendedores
+            - generic [ref=f57e61]: Salarios y equipo de ventas
+          - generic [aria-hidden] [ref=f57e62]: ↗
+        - link "Usuarios Cuentas y accesos" [ref=f57e63] [cursor=pointer]:
+          - /url: "?page=users"
+          - generic [aria-hidden] [ref=f57e64]: ◉
+          - generic [ref=f57e65]:
+            - strong [ref=f57e66]: Usuarios
+            - generic [ref=f57e67]: Cuentas y accesos
+          - generic [aria-hidden] [ref=f57e68]: ↗
+    - generic [ref=f57e69]:
+      - generic [ref=f57e70]:
+        - heading "Reportes" [level=2] [ref=f57e71]
+        - generic [ref=f57e72]: 4 módulos
+      - generic [ref=f57e73]:
+        - link "Ventas por vendedor Cobros, salarios y comisiones" [ref=f57e74] [cursor=pointer]:
+          - /url: "?page=sales_sellers"
+          - generic [aria-hidden] [ref=f57e75]: ▥
+          - generic [ref=f57e76]:
+            - strong [ref=f57e77]: Ventas por vendedor
+            - generic [ref=f57e78]: Cobros, salarios y comisiones
+          - generic [aria-hidden] [ref=f57e79]: ↗
+        - link "Ventas generales Pedidos y cobros" [ref=f57e80] [cursor=pointer]:
+          - /url: "?page=sales_general"
+          - generic [aria-hidden] [ref=f57e81]: ▤
+          - generic [ref=f57e82]:
+            - strong [ref=f57e83]: Ventas generales
+            - generic [ref=f57e84]: Pedidos y cobros
+          - generic [aria-hidden] [ref=f57e85]: ↗
+        - link "Compras de materia prima Entradas y costos" [ref=f57e86] [cursor=pointer]:
+          - /url: "?page=material_purchases"
+          - generic [aria-hidden] [ref=f57e87]: ▦
+          - generic [ref=f57e88]:
+            - strong [ref=f57e89]: Compras de materia prima
+            - generic [ref=f57e90]: Entradas y costos
+          - generic [aria-hidden] [ref=f57e91]: ↗
+        - link "Reporte de clientes Pedidos por cliente" [ref=f57e92] [cursor=pointer]:
+          - /url: "?page=customer_report"
+          - generic [aria-hidden] [ref=f57e93]: ◎
+          - generic [ref=f57e94]:
+            - strong [ref=f57e95]: Reporte de clientes
+            - generic [ref=f57e96]: Pedidos por cliente
+          - generic [aria-hidden] [ref=f57e97]: ↗
+  - dialog "Facturación" [ref=f57e98]:
+    - generic [ref=f57e99]:
+      - heading "Facturación" [level=2] [ref=f57e100]
+      - button "Cerrar" [active] [ref=f57e101] [cursor=pointer]
+    - iframe [ref=f57e102]:
+      - main [ref=f58e2]:
+        - heading "Facturación" [level=1] [ref=f58e4]
+        - generic [ref=f58e5]:
+          - generic [ref=f58e6]:
+            - heading "Cliente" [level=2] [ref=f58e7]
+            - generic [ref=f58e8]:
+              - text: Seleccionar cliente
+              - combobox "Seleccionar cliente" [ref=f58e9]:
+                - option "Selecciona un cliente" [selected]
+            - paragraph [ref=f58e10]: Registra un cliente en el módulo Clientes para continuar.
+          - generic [ref=f58e11]:
+            - generic [ref=f58e12]:
+              - heading "Productos disponibles" [level=2] [ref=f58e13]
+              - generic [ref=f58e14]:
+                - text: Buscar producto
+                - searchbox "Buscar producto" [ref=f58e15]
+            - table [ref=f58e17]:
+              - rowgroup [ref=f58e18]:
+                - row [ref=f58e19]:
+                  - columnheader "Producto" [ref=f58e20]
+                  - columnheader "Categoría" [ref=f58e21]
+                  - columnheader "Tamaño" [ref=f58e22]
+                  - columnheader "Minorista" [ref=f58e23]
+                  - columnheader "Mayorista" [ref=f58e24]
+                  - columnheader [ref=f58e25]
+              - rowgroup [ref=f58e26]:
+                - row [ref=f58e27]:
+                  - cell "Producto de prueba" [ref=f58e28]
+                  - cell "Pruebas" [ref=f58e29]
+                  - cell "10 x 10 cm" [ref=f58e30]
+                  - cell "Gs. 3.000.000" [ref=f58e31]
+                  - cell "—" [ref=f58e32]
+                  - cell [ref=f58e33]:
+                    - button "Añadir" [ref=f58e34] [cursor=pointer]
+          - generic [ref=f58e35]:
+            - heading "Detalle de la venta" [level=2] [ref=f58e36]
+            - table [ref=f58e38]:
+              - rowgroup [ref=f58e39]:
+                - row [ref=f58e40]:
+                  - columnheader "Producto" [ref=f58e41]
+                  - columnheader "Precio" [ref=f58e42]
+                  - columnheader "Cantidad" [ref=f58e43]
+                  - columnheader "Importe" [ref=f58e44]
+                  - columnheader [ref=f58e45]
+              - rowgroup
+            - paragraph [ref=f58e46]: Añade productos para preparar la venta.
+          - generic [ref=f58e47]:
+            - generic [ref=f58e48]:
+              - generic [ref=f58e49]:
+                - text: Comprobante de la seña (PDF, JPG o PNG · hasta 5 MB)
+                - button "Comprobante de la seña (PDF, JPG o PNG · hasta 5 MB)" [ref=f58e50]
+              - generic [ref=f58e51]:
+                - generic [ref=f58e52]:
+                  - term [ref=f58e53]: Seña (50 %)
+                  - definition [ref=f58e54]: Gs. 0
+                - generic [ref=f58e55]:
+                  - term [ref=f58e56]: Saldo
+                  - definition [ref=f58e57]: Gs. 0
+                - generic [ref=f58e58]:
+                  - term [ref=f58e59]: Total
+                  - definition [ref=f58e60]: Gs. 0
+            - button "Enviar a revisión" [disabled] [ref=f58e61]

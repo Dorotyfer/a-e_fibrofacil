@@ -11,7 +11,7 @@ $latest = array_column($payments, 'status', 'stage');
 $nextProof = ($latest['deposit'] ?? null) === 'rejected' ? 'deposit'
   : (($order['status'] === 'pending' && $order['stocked']) || ($latest['balance'] ?? null) === 'rejected' ? 'balance' : null);
 ?>
-<a href="?page=orders">← Pedidos</a>
+<a href="?page=<?= e($page) ?>">← <?= $page === 'sales' ? 'Ventas' : 'Pedidos' ?></a>
 <header class="page-header"><div><h1>Pedido #<?= $id ?></h1><p class="muted"><?= e($order['customer']) ?> · <?= e($order['created_at']) ?></p></div><?= badge($order['status']) ?></header>
 <?php if ($missing || ($order['status'] === 'pending' && !$order['stocked'])): ?>
   <section class="notice" role="status">
@@ -61,7 +61,7 @@ $nextProof = ($latest['deposit'] ?? null) === 'rejected' ? 'deposit'
       </tr>
     <?php endforeach; ?></tbody>
   </table></div>
-  <?php if ($seller && $nextProof): ?>
+  <?php if ($nextProof): ?>
     <form method="post" enctype="multipart/form-data" class="toolbar">
       <?php hidden('proof', $id); ?><input type="hidden" name="stage" value="<?= e($nextProof) ?>">
       <label><?= $nextProof === 'deposit' ? 'Nuevo comprobante de seña' : 'Comprobante del saldo' ?> (hasta 5 MB)

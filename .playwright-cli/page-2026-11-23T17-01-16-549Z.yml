@@ -1,0 +1,71 @@
+- generic [active] [ref=f38e1]:
+  - banner [ref=f38e2]:
+    - link "Fibrofácil" [ref=f38e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f38e4]: F
+      - text: Fibrofácil
+    - generic [ref=f38e5]:
+      - strong [ref=f38e6]: Administración
+      - generic [ref=f38e7]: Administrador
+    - button "Cerrar sesión" [ref=f38e9] [cursor=pointer]
+  - navigation "Módulos" [ref=f38e10]:
+    - group [ref=f38e11]:
+      - generic "Menú principal" [ref=f38e12] [cursor=pointer]
+      - generic [ref=f38e13]:
+        - link "Pedidos" [ref=f38e14] [cursor=pointer]:
+          - /url: "?page=orders"
+        - link "Productos" [ref=f38e15] [cursor=pointer]:
+          - /url: "?page=products"
+        - link "Materia prima" [ref=f38e16] [cursor=pointer]:
+          - /url: "?page=materials"
+        - link "Vendedores" [ref=f38e17] [cursor=pointer]:
+          - /url: "?page=sellers"
+        - link "Usuarios" [ref=f38e18] [cursor=pointer]:
+          - /url: "?page=users"
+        - link "Reportes" [ref=f38e19] [cursor=pointer]:
+          - /url: "?page=reports"
+  - main [ref=f38e20]:
+    - generic [ref=f38e21]:
+      - heading "Productos" [level=1] [ref=f38e22]
+      - link "Añadir producto" [ref=f38e23] [cursor=pointer]:
+        - /url: "?page=products&new=1"
+    - generic [ref=f38e24]:
+      - generic [ref=f38e25]:
+        - generic [ref=f38e26]:
+          - text: Buscar
+          - searchbox "Buscar" [ref=f38e27]
+        - generic [ref=f38e28]:
+          - text: Filtrar por columna
+          - combobox "Filtrar por columna" [ref=f38e29]:
+            - option "Todas las columnas" [selected]
+            - option "Producto"
+            - option "Categoría"
+            - option "Tamaño"
+            - option "Costo de producción"
+            - option "Minorista"
+            - option "Mayorista"
+            - option "Diseño"
+        - generic [ref=f38e30]: 1 de 1 registros
+      - table [ref=f38e32]:
+        - rowgroup [ref=f38e33]:
+          - row [ref=f38e34]:
+            - columnheader "Producto" [ref=f38e35]
+            - columnheader "Categoría" [ref=f38e36]
+            - columnheader "Tamaño" [ref=f38e37]
+            - columnheader "Costo de producción" [ref=f38e38]
+            - columnheader "Minorista" [ref=f38e39]
+            - columnheader "Mayorista" [ref=f38e40]
+            - columnheader "Diseño" [ref=f38e41]
+        - rowgroup [ref=f38e42]:
+          - row [ref=f38e43]:
+            - cell [ref=f38e44]:
+              - link "Producto de prueba" [ref=f38e45] [cursor=pointer]:
+                - /url: "?page=products&edit=1"
+            - cell "Pruebas" [ref=f38e46]
+            - cell "10 x 10 cm" [ref=f38e47]
+            - cell "Gs. 1.000" [ref=f38e48]
+            - cell "Gs. 3.000.000" [ref=f38e49]
+            - cell "—" [ref=f38e50]
+            - cell [ref=f38e51]:
+              - link "Descargar PLT" [ref=f38e52] [cursor=pointer]:
+                - /url: "?page=plot&id=1"

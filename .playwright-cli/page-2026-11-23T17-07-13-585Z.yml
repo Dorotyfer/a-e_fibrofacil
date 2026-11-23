@@ -1,0 +1,64 @@
+- generic [ref=f42e1]:
+  - banner [ref=f42e2]:
+    - link "Fibrofácil" [ref=f42e3] [cursor=pointer]:
+      - /url: "?page=home"
+      - generic [aria-hidden] [ref=f42e4]: F
+      - text: Fibrofácil
+    - generic [ref=f42e5]:
+      - strong [ref=f42e6]: Administración
+      - generic [ref=f42e7]: Administrador
+    - button "Cerrar sesión" [ref=f42e9] [cursor=pointer]
+  - navigation "Módulos" [ref=f42e10]:
+    - group [ref=f42e11]:
+      - generic "Menú principal" [ref=f42e12] [cursor=pointer]
+      - generic [ref=f42e13]:
+        - link "Pedidos" [ref=f42e14] [cursor=pointer]:
+          - /url: "?page=orders"
+        - link "Clientes" [ref=f42e15] [cursor=pointer]:
+          - /url: "?page=customers"
+        - link "Productos" [ref=f42e16] [cursor=pointer]:
+          - /url: "?page=products"
+        - link "Materia prima" [ref=f42e17] [cursor=pointer]:
+          - /url: "?page=materials"
+        - link "Vendedores" [ref=f42e18] [cursor=pointer]:
+          - /url: "?page=sellers"
+        - link "Usuarios" [ref=f42e19] [cursor=pointer]:
+          - /url: "?page=users"
+        - link "Reportes" [ref=f42e20] [cursor=pointer]:
+          - /url: "?page=reports"
+  - main [ref=f42e21]:
+    - heading "Menú principal" [level=1] [ref=f42e22]
+  - dialog "Clientes" [ref=f42e23]:
+    - generic [ref=f42e24]:
+      - heading "Clientes" [level=2] [ref=f42e25]
+      - button "Cerrar" [active] [ref=f42e26] [cursor=pointer]
+    - iframe [ref=f42e27]:
+      - main [ref=f43e2]:
+        - generic [ref=f43e3]:
+          - heading "Clientes" [level=1] [ref=f43e4]
+          - link "Añadir cliente" [ref=f43e5] [cursor=pointer]:
+            - /url: "?page=customers&new=1"
+        - generic [ref=f43e6]:
+          - generic [ref=f43e7]:
+            - generic [ref=f43e8]:
+              - text: Buscar
+              - searchbox "Buscar" [ref=f43e9]
+            - generic [ref=f43e10]:
+              - text: Filtrar por columna
+              - combobox "Filtrar por columna" [ref=f43e11]:
+                - option "Todas las columnas" [selected]
+                - option "Nombre"
+                - option "Teléfono"
+                - option "Correo"
+                - option "Dirección"
+            - generic [ref=f43e12]: 0 de 0 registros
+          - table [ref=f43e14]:
+            - rowgroup [ref=f43e15]:
+              - row [ref=f43e16]:
+                - columnheader "Nombre" [ref=f43e17]
+                - columnheader "Teléfono" [ref=f43e18]
+                - columnheader "Correo" [ref=f43e19]
+                - columnheader "Dirección" [ref=f43e20]
+            - rowgroup [ref=f43e21]:
+              - row [ref=f43e22]:
+                - cell "Todavía no hay clientes registrados." [ref=f43e23]
