@@ -1,0 +1,101 @@
+- generic [active] [ref=f3e1]:
+  - complementary [ref=f3e2]:
+    - link "Fibrofácil" [ref=f3e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f3e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f3e5]:
+      - link "Pedidos" [ref=f3e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f3e7] [cursor=pointer]:
+        - /url: "?page=products"
+      - link "Materia prima" [ref=f3e8] [cursor=pointer]:
+        - /url: "?page=materials"
+      - link "Vendedores" [ref=f3e9] [cursor=pointer]:
+        - /url: "?page=sellers"
+      - link "Reportes" [ref=f3e10] [cursor=pointer]:
+        - /url: "?page=reports"
+    - generic [ref=f3e11]:
+      - strong [ref=f3e12]: Administración
+      - generic [ref=f3e13]: Administrador
+      - button "Cerrar sesión" [ref=f3e15] [cursor=pointer]
+  - main [ref=f3e16]:
+    - status [ref=f3e17]: Cambios guardados.
+    - heading "Materia prima" [level=1] [ref=f3e19]
+    - generic [ref=f3e20]:
+      - heading "Existencias" [level=2] [ref=f3e21]
+      - table [ref=f3e23]:
+        - rowgroup [ref=f3e24]:
+          - row [ref=f3e25]:
+            - columnheader "Material" [ref=f3e26]
+            - columnheader "Disponible" [ref=f3e27]
+            - columnheader "Costo promedio por unidad" [ref=f3e28]
+        - rowgroup [ref=f3e29]:
+          - row [ref=f3e30]:
+            - cell "MDF 3 mm" [ref=f3e31]
+            - cell "0 cm²" [ref=f3e32]
+            - cell "Sin compra registrada" [ref=f3e33]
+          - row [ref=f3e34]:
+            - cell "Pegamento" [ref=f3e35]
+            - cell "0 g" [ref=f3e36]
+            - cell "Sin compra registrada" [ref=f3e37]
+    - generic [ref=f3e38]:
+      - generic [ref=f3e39]:
+        - heading "Registrar compra" [level=2] [ref=f3e40]
+        - generic [ref=f3e41]:
+          - generic [ref=f3e42]:
+            - text: Material
+            - combobox "Material" [ref=f3e43]:
+              - option "MDF 3 mm" [selected]
+              - option "Pegamento"
+          - group [ref=f3e44]:
+            - generic [ref=f3e45]:
+              - text: Ancho de placa (cm)
+              - spinbutton "Ancho de placa (cm)" [ref=f3e46]
+            - generic [ref=f3e47]:
+              - text: Alto de placa (cm)
+              - spinbutton "Alto de placa (cm)" [ref=f3e48]
+            - generic [ref=f3e49]:
+              - text: Cantidad de placas
+              - spinbutton "Cantidad de placas" [ref=f3e50]: "1"
+          - generic [ref=f3e51]:
+            - text: Costo total (Gs.)
+            - spinbutton "Costo total (Gs.)" [ref=f3e52]
+          - button "Registrar entrada" [ref=f3e53] [cursor=pointer]
+      - generic [ref=f3e54]:
+        - generic [ref=f3e55]:
+          - heading "Añadir espesor de MDF" [level=2] [ref=f3e56]
+          - generic [ref=f3e57]:
+            - generic [ref=f3e58]:
+              - text: Espesor (mm)
+              - spinbutton "Espesor (mm)" [ref=f3e59]
+            - button "Añadir material" [ref=f3e60] [cursor=pointer]
+        - generic [ref=f3e61]:
+          - heading "Ajustar existencias" [level=2] [ref=f3e62]
+          - generic [ref=f3e63]:
+            - generic [ref=f3e64]:
+              - text: Material
+              - combobox "Material" [ref=f3e65]:
+                - option "MDF 3 mm (cm²)" [selected]
+                - option "Pegamento (g)"
+            - generic [ref=f3e66]:
+              - text: Cantidad a sumar o restar
+              - spinbutton "Cantidad a sumar o restar" [ref=f3e67]
+            - generic [ref=f3e68]:
+              - text: Motivo
+              - textbox "Motivo" [ref=f3e69]
+            - button "Guardar ajuste" [ref=f3e70] [cursor=pointer]
+    - generic [ref=f3e71]:
+      - heading "Últimos movimientos" [level=2] [ref=f3e72]
+      - table [ref=f3e74]:
+        - rowgroup [ref=f3e75]:
+          - row [ref=f3e76]:
+            - columnheader "Fecha" [ref=f3e77]
+            - columnheader "Material" [ref=f3e78]
+            - columnheader "Movimiento" [ref=f3e79]
+            - columnheader "Cantidad" [ref=f3e80]
+            - columnheader "Detalle" [ref=f3e81]
+            - columnheader "Registró" [ref=f3e82]
+        - rowgroup [ref=f3e83]:
+          - row [ref=f3e84]:
+            - cell "Todavía no hay movimientos." [ref=f3e85]

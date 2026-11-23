@@ -1,0 +1,114 @@
+- generic [active] [ref=f18e1]:
+  - complementary [ref=f18e2]:
+    - link "Fibrofácil" [ref=f18e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f18e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f18e5]:
+      - link "Pedidos" [ref=f18e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f18e7] [cursor=pointer]:
+        - /url: "?page=products"
+      - link "Materia prima" [ref=f18e8] [cursor=pointer]:
+        - /url: "?page=materials"
+      - link "Vendedores" [ref=f18e9] [cursor=pointer]:
+        - /url: "?page=sellers"
+      - link "Reportes" [ref=f18e10] [cursor=pointer]:
+        - /url: "?page=reports"
+    - generic [ref=f18e11]:
+      - strong [ref=f18e12]: Administración
+      - generic [ref=f18e13]: Administrador
+      - button "Cerrar sesión" [ref=f18e15] [cursor=pointer]
+  - main [ref=f18e16]:
+    - heading "Materia prima" [level=1] [ref=f18e18]
+    - generic [ref=f18e19]:
+      - heading "Existencias" [level=2] [ref=f18e20]
+      - table [ref=f18e22]:
+        - rowgroup [ref=f18e23]:
+          - row [ref=f18e24]:
+            - columnheader "Material" [ref=f18e25]
+            - columnheader "Disponible" [ref=f18e26]
+            - columnheader "Costo promedio por unidad" [ref=f18e27]
+        - rowgroup [ref=f18e28]:
+          - row [ref=f18e29]:
+            - cell "MDF 3 mm" [ref=f18e30]
+            - cell "9.900 cm²" [ref=f18e31]
+            - cell "Gs. 10 / cm²" [ref=f18e32]
+          - row [ref=f18e33]:
+            - cell "Pegamento" [ref=f18e34]
+            - cell "0 g" [ref=f18e35]
+            - cell "Sin compra registrada" [ref=f18e36]
+    - generic [ref=f18e37]:
+      - generic [ref=f18e38]:
+        - heading "Registrar compra" [level=2] [ref=f18e39]
+        - generic [ref=f18e40]:
+          - generic [ref=f18e41]:
+            - text: Material
+            - combobox "Material" [ref=f18e42]:
+              - option "MDF 3 mm" [selected]
+              - option "Pegamento"
+          - group [ref=f18e43]:
+            - generic [ref=f18e44]:
+              - text: Ancho de placa (cm)
+              - spinbutton "Ancho de placa (cm)" [ref=f18e45]
+            - generic [ref=f18e46]:
+              - text: Alto de placa (cm)
+              - spinbutton "Alto de placa (cm)" [ref=f18e47]
+            - generic [ref=f18e48]:
+              - text: Cantidad de placas
+              - spinbutton "Cantidad de placas" [ref=f18e49]: "1"
+          - generic [ref=f18e50]:
+            - text: Costo total (Gs.)
+            - spinbutton "Costo total (Gs.)" [ref=f18e51]
+          - button "Registrar entrada" [ref=f18e52] [cursor=pointer]
+      - generic [ref=f18e53]:
+        - generic [ref=f18e54]:
+          - heading "Añadir espesor de MDF" [level=2] [ref=f18e55]
+          - generic [ref=f18e56]:
+            - generic [ref=f18e57]:
+              - text: Espesor (mm)
+              - spinbutton "Espesor (mm)" [ref=f18e58]
+            - button "Añadir material" [ref=f18e59] [cursor=pointer]
+        - generic [ref=f18e60]:
+          - heading "Ajustar existencias" [level=2] [ref=f18e61]
+          - generic [ref=f18e62]:
+            - generic [ref=f18e63]:
+              - text: Material
+              - combobox "Material" [ref=f18e64]:
+                - option "MDF 3 mm (cm²)" [selected]
+                - option "Pegamento (g)"
+            - generic [ref=f18e65]:
+              - text: Cantidad a sumar o restar
+              - spinbutton "Cantidad a sumar o restar" [ref=f18e66]
+            - generic [ref=f18e67]:
+              - text: Motivo
+              - textbox "Motivo" [ref=f18e68]
+            - button "Guardar ajuste" [ref=f18e69] [cursor=pointer]
+    - generic [ref=f18e70]:
+      - heading "Últimos movimientos" [level=2] [ref=f18e71]
+      - table [ref=f18e73]:
+        - rowgroup [ref=f18e74]:
+          - row [ref=f18e75]:
+            - columnheader "Fecha" [ref=f18e76]
+            - columnheader "Material" [ref=f18e77]
+            - columnheader "Movimiento" [ref=f18e78]
+            - columnheader "Cantidad" [ref=f18e79]
+            - columnheader "Detalle" [ref=f18e80]
+            - columnheader "Registró" [ref=f18e81]
+        - rowgroup [ref=f18e82]:
+          - row [ref=f18e83]:
+            - cell "2026-11-23 13:39:14" [ref=f18e84]
+            - cell "MDF 3 mm" [ref=f18e85]
+            - cell "Salida" [ref=f18e86]
+            - cell "-100 cm²" [ref=f18e87]
+            - cell [ref=f18e88]:
+              - 'link "Pedido #1" [ref=f18e89] [cursor=pointer]':
+                - /url: "?page=orders&id=1"
+            - cell "Administración" [ref=f18e90]
+          - row [ref=f18e91]:
+            - cell "2026-11-23 13:35:37" [ref=f18e92]
+            - cell "MDF 3 mm" [ref=f18e93]
+            - cell "Compra" [ref=f18e94]
+            - cell "10.000 cm²" [ref=f18e95]
+            - cell "Gs. 100.000 · 1 × 100 × 100 cm" [ref=f18e96]
+            - cell "Administración" [ref=f18e97]

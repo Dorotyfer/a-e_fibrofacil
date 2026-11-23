@@ -1,0 +1,58 @@
+- generic [active] [ref=f12e1]:
+  - complementary [ref=f12e2]:
+    - link "Fibrofácil" [ref=f12e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f12e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f12e5]:
+      - link "Pedidos" [ref=f12e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f12e7] [cursor=pointer]:
+        - /url: "?page=products"
+    - generic [ref=f12e8]:
+      - strong [ref=f12e9]: Vendedor de prueba
+      - generic [ref=f12e10]: Vendedor
+      - button "Cerrar sesión" [ref=f12e12] [cursor=pointer]
+  - main [ref=f12e13]:
+    - link "← Pedidos" [ref=f12e14] [cursor=pointer]:
+      - /url: "?page=orders"
+    - heading "Nuevo pedido" [level=1] [ref=f12e16]
+    - generic [ref=f12e17]:
+      - generic [ref=f12e18]:
+        - heading "Detalle del pedido" [level=2] [ref=f12e19]
+        - generic [ref=f12e20]:
+          - text: Cliente
+          - textbox "Cliente" [ref=f12e21]
+        - group [ref=f12e23]:
+          - generic [ref=f12e24]:
+            - text: Producto
+            - combobox "Producto" [ref=f12e25]:
+              - option "Producto de prueba · 10 x 10 cm" [selected]
+          - generic [ref=f12e26]:
+            - text: Precio
+            - combobox "Precio" [ref=f12e27]:
+              - option "Minorista" [selected]
+              - option "Mayorista" [disabled]
+          - generic [ref=f12e28]:
+            - text: Cantidad
+            - spinbutton "Cantidad" [ref=f12e29]: "1"
+          - generic [ref=f12e30]:
+            - status [ref=f12e31]: Gs. 3.000.000
+            - button "Quitar" [disabled] [ref=f12e32]
+        - button "Añadir producto" [ref=f12e34] [cursor=pointer]
+      - generic [ref=f12e35]:
+        - heading "Comprobante de la seña" [level=2] [ref=f12e36]
+        - generic [ref=f12e37]:
+          - generic [ref=f12e38]:
+            - term [ref=f12e39]: Total
+            - definition [ref=f12e40]: Gs. 3.000.000
+          - generic [ref=f12e41]:
+            - term [ref=f12e42]: Seña (50 %)
+            - definition [ref=f12e43]: Gs. 1.500.000
+          - generic [ref=f12e44]:
+            - term [ref=f12e45]: Saldo
+            - definition [ref=f12e46]: Gs. 1.500.000
+        - generic [ref=f12e47]:
+          - text: Transferencia bancaria (PDF, JPG o PNG · hasta 5 MB)
+          - button "Transferencia bancaria (PDF, JPG o PNG · hasta 5 MB)" [ref=f12e48]
+        - button "Enviar a revisión" [ref=f12e49] [cursor=pointer]

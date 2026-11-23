@@ -1,0 +1,81 @@
+- generic [active] [ref=f17e1]:
+  - complementary [ref=f17e2]:
+    - link "Fibrofácil" [ref=f17e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f17e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f17e5]:
+      - link "Pedidos" [ref=f17e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f17e7] [cursor=pointer]:
+        - /url: "?page=products"
+      - link "Materia prima" [ref=f17e8] [cursor=pointer]:
+        - /url: "?page=materials"
+      - link "Vendedores" [ref=f17e9] [cursor=pointer]:
+        - /url: "?page=sellers"
+      - link "Reportes" [ref=f17e10] [cursor=pointer]:
+        - /url: "?page=reports"
+    - generic [ref=f17e11]:
+      - strong [ref=f17e12]: Administración
+      - generic [ref=f17e13]: Administrador
+      - button "Cerrar sesión" [ref=f17e15] [cursor=pointer]
+  - main [ref=f17e16]:
+    - status [ref=f17e17]: Comprobante aprobado.
+    - link "← Pedidos" [ref=f17e18] [cursor=pointer]:
+      - /url: "?page=orders"
+    - generic [ref=f17e19]:
+      - generic [ref=f17e20]:
+        - 'heading "Pedido #1" [level=1] [ref=f17e21]'
+        - paragraph [ref=f17e22]: Cliente de prueba · 2026-11-23 13:38:19
+      - generic [ref=f17e23]: Pendiente
+    - generic [ref=f17e24]:
+      - heading "Productos del pedido" [level=2] [ref=f17e25]
+      - table [ref=f17e27]:
+        - rowgroup [ref=f17e28]:
+          - row [ref=f17e29]:
+            - columnheader "Producto" [ref=f17e30]
+            - columnheader "Cantidad" [ref=f17e31]
+            - columnheader "Precio unitario" [ref=f17e32]
+            - columnheader "Costo unitario" [ref=f17e33]
+            - columnheader "Subtotal" [ref=f17e34]
+        - rowgroup [ref=f17e35]:
+          - row [ref=f17e36]:
+            - cell "Producto de prueba · Minorista" [ref=f17e37]
+            - cell "1" [ref=f17e38]
+            - cell "Gs. 3.000.000" [ref=f17e39]
+            - cell "Gs. 1.000" [ref=f17e40]
+            - cell "Gs. 3.000.000" [ref=f17e41]
+      - paragraph [ref=f17e42]:
+        - strong [ref=f17e43]: Total Gs. 3.000.000
+        - text: · Seña Gs. 1.500.000 · Saldo Gs. 1.500.000
+    - generic [ref=f17e44]:
+      - heading "Comprobantes" [level=2] [ref=f17e45]
+      - table [ref=f17e47]:
+        - rowgroup [ref=f17e48]:
+          - row [ref=f17e49]:
+            - columnheader "Cobro" [ref=f17e50]
+            - columnheader "Importe" [ref=f17e51]
+            - columnheader "Estado" [ref=f17e52]
+            - columnheader "Comprobante" [ref=f17e53]
+            - columnheader "Revisión" [ref=f17e54]
+        - rowgroup [ref=f17e55]:
+          - row [ref=f17e56]:
+            - cell "Seña 2026-11-23 13:38:19" [ref=f17e57]: Seña2026-11-23 13:38:19
+            - cell "Gs. 1.500.000" [ref=f17e58]
+            - cell "Aprobado" [ref=f17e59]
+            - cell [ref=f17e61]:
+              - link "Descargar" [ref=f17e62] [cursor=pointer]:
+                - /url: "?page=proof&id=1"
+            - cell "2026-11-23 13:39:14 · Administración" [ref=f17e63]
+    - generic [ref=f17e64]:
+      - heading "Historial" [level=2] [ref=f17e65]
+      - list [ref=f17e66]:
+        - listitem [ref=f17e67]:
+          - generic [ref=f17e68]: Salida de materia prima registrada.
+          - generic [ref=f17e69]: 2026-11-23 13:39:14 · Administración
+        - listitem [ref=f17e70]:
+          - generic [ref=f17e71]: Seña · comprobante aprobado.
+          - generic [ref=f17e72]: 2026-11-23 13:39:14 · Administración
+        - listitem [ref=f17e73]:
+          - generic [ref=f17e74]: Pedido creado. Seña enviada a revisión.
+          - generic [ref=f17e75]: 2026-11-23 13:38:19 · Vendedor de prueba

@@ -1,0 +1,55 @@
+- generic [active] [ref=f24e1]:
+  - complementary [ref=f24e2]:
+    - link "Fibrofácil" [ref=f24e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f24e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f24e5]:
+      - link "Pedidos" [ref=f24e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f24e7] [cursor=pointer]:
+        - /url: "?page=products"
+      - link "Materia prima" [ref=f24e8] [cursor=pointer]:
+        - /url: "?page=materials"
+      - link "Vendedores" [ref=f24e9] [cursor=pointer]:
+        - /url: "?page=sellers"
+      - link "Reportes" [ref=f24e10] [cursor=pointer]:
+        - /url: "?page=reports"
+    - generic [ref=f24e11]:
+      - strong [ref=f24e12]: Administración
+      - generic [ref=f24e13]: Administrador
+      - button "Cerrar sesión" [ref=f24e15] [cursor=pointer]
+  - main [ref=f24e16]:
+    - heading "Pedidos" [level=1] [ref=f24e18]
+    - generic [ref=f24e19]:
+      - generic [ref=f24e20]:
+        - generic [ref=f24e21]:
+          - text: Estado
+          - combobox "Estado" [ref=f24e22]:
+            - option "Todos" [selected]
+            - option "En revisión"
+            - option "Pendiente"
+            - option "Falta material"
+            - option "Entregado"
+        - button "Filtrar" [ref=f24e23] [cursor=pointer]
+      - table [ref=f24e25]:
+        - rowgroup [ref=f24e26]:
+          - row [ref=f24e27]:
+            - columnheader "Pedido" [ref=f24e28]
+            - columnheader "Cliente" [ref=f24e29]
+            - columnheader "Vendedor" [ref=f24e30]
+            - columnheader "Fecha" [ref=f24e31]
+            - columnheader "Total" [ref=f24e32]
+            - columnheader "Estado" [ref=f24e33]
+            - columnheader "Último cobro" [ref=f24e34]
+        - rowgroup [ref=f24e35]:
+          - row [ref=f24e36]:
+            - cell [ref=f24e37]:
+              - link "#1" [ref=f24e38] [cursor=pointer]:
+                - /url: "?page=orders&id=1"
+            - cell "Cliente de prueba" [ref=f24e39]
+            - cell "Vendedor de prueba" [ref=f24e40]
+            - cell "2026-11-23 13:38:19" [ref=f24e41]
+            - cell "Gs. 3.000.000" [ref=f24e42]
+            - cell "Entregado" [ref=f24e43]
+            - cell "En revisión" [ref=f24e45]

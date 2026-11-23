@@ -1,0 +1,104 @@
+- generic [active] [ref=f27e1]:
+  - complementary [ref=f27e2]:
+    - link "Fibrofácil" [ref=f27e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f27e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f27e5]:
+      - link "Pedidos" [ref=f27e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f27e7] [cursor=pointer]:
+        - /url: "?page=products"
+      - link "Materia prima" [ref=f27e8] [cursor=pointer]:
+        - /url: "?page=materials"
+      - link "Vendedores" [ref=f27e9] [cursor=pointer]:
+        - /url: "?page=sellers"
+      - link "Reportes" [ref=f27e10] [cursor=pointer]:
+        - /url: "?page=reports"
+    - generic [ref=f27e11]:
+      - strong [ref=f27e12]: Administración
+      - generic [ref=f27e13]: Administrador
+      - button "Cerrar sesión" [ref=f27e15] [cursor=pointer]
+  - main [ref=f27e16]:
+    - heading "Reportes" [level=1] [ref=f27e18]
+    - generic [ref=f27e19]:
+      - link "En revisión 0" [ref=f27e20] [cursor=pointer]:
+        - /url: "?page=orders&status=review"
+        - generic [ref=f27e21]: En revisión
+        - strong [ref=f27e22]: "0"
+      - link "Pendientes 0" [ref=f27e23] [cursor=pointer]:
+        - /url: "?page=orders&status=pending"
+        - generic [ref=f27e24]: Pendientes
+        - strong [ref=f27e25]: "0"
+      - link "Entregados 1" [ref=f27e26] [cursor=pointer]:
+        - /url: "?page=orders&status=delivered"
+        - generic [ref=f27e27]: Entregados
+        - strong [ref=f27e28]: "1"
+      - link "Sin salida registrada 0" [ref=f27e29] [cursor=pointer]:
+        - /url: "?page=orders&status=shortage"
+        - generic [ref=f27e30]: Sin salida registrada
+        - strong [ref=f27e31]: "0"
+    - generic [ref=f27e32]:
+      - generic [ref=f27e33]:
+        - heading "Liquidación por vendedor" [level=2] [ref=f27e34]
+        - generic [ref=f27e35]:
+          - generic [ref=f27e36]:
+            - text: Mes
+            - textbox "Mes" [ref=f27e37]: 2026-11
+          - button "Consultar" [ref=f27e38] [cursor=pointer]
+      - table [ref=f27e40]:
+        - rowgroup [ref=f27e41]:
+          - row [ref=f27e42]:
+            - columnheader "Vendedor" [ref=f27e43]
+            - columnheader "Cobros validados" [ref=f27e44]
+            - columnheader "Salario" [ref=f27e45]
+            - columnheader "Comisión por tramos" [ref=f27e46]
+            - columnheader "Liquidación" [ref=f27e47]
+        - rowgroup [ref=f27e48]:
+          - row [ref=f27e49]:
+            - cell "Vendedor de prueba" [ref=f27e50]
+            - cell "Gs. 3.000.000" [ref=f27e51]
+            - cell "Sin configurar" [ref=f27e52]
+            - cell "Gs. 105.000" [ref=f27e53]
+            - cell "—" [ref=f27e54]
+    - generic [ref=f27e55]:
+      - generic [ref=f27e56]:
+        - heading "Comprobantes por revisar" [level=2] [ref=f27e57]
+        - table [ref=f27e59]:
+          - rowgroup [ref=f27e60]:
+            - row [ref=f27e61]:
+              - columnheader "Pedido" [ref=f27e62]
+              - columnheader "Cliente" [ref=f27e63]
+              - columnheader "Cobro" [ref=f27e64]
+              - columnheader "Importe" [ref=f27e65]
+          - rowgroup [ref=f27e66]:
+            - row [ref=f27e67]:
+              - cell "No hay comprobantes pendientes." [ref=f27e68]
+      - generic [ref=f27e69]:
+        - heading "Pedidos con salida pendiente" [level=2] [ref=f27e70]
+        - table [ref=f27e72]:
+          - rowgroup [ref=f27e73]:
+            - row [ref=f27e74]:
+              - columnheader "Pedido" [ref=f27e75]
+              - columnheader "Cliente" [ref=f27e76]
+              - columnheader "Faltantes" [ref=f27e77]
+          - rowgroup [ref=f27e78]:
+            - row [ref=f27e79]:
+              - cell "No hay salidas pendientes." [ref=f27e80]
+    - generic [ref=f27e81]:
+      - generic [ref=f27e82]:
+        - heading "Existencias de materia prima" [level=2] [ref=f27e83]
+        - link "Ver movimientos" [ref=f27e84] [cursor=pointer]:
+          - /url: "?page=materials"
+      - table [ref=f27e86]:
+        - rowgroup [ref=f27e87]:
+          - row [ref=f27e88]:
+            - columnheader "Material" [ref=f27e89]
+            - columnheader "Disponible" [ref=f27e90]
+        - rowgroup [ref=f27e91]:
+          - row [ref=f27e92]:
+            - cell "MDF 3 mm" [ref=f27e93]
+            - cell "9.900 cm²" [ref=f27e94]
+          - row [ref=f27e95]:
+            - cell "Pegamento" [ref=f27e96]
+            - cell "0 g" [ref=f27e97]

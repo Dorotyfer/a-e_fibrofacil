@@ -1,0 +1,95 @@
+- generic [active] [ref=f26e1]:
+  - complementary [ref=f26e2]:
+    - link "Fibrofácil" [ref=f26e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f26e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f26e5]:
+      - link "Pedidos" [ref=f26e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f26e7] [cursor=pointer]:
+        - /url: "?page=products"
+      - link "Materia prima" [ref=f26e8] [cursor=pointer]:
+        - /url: "?page=materials"
+      - link "Vendedores" [ref=f26e9] [cursor=pointer]:
+        - /url: "?page=sellers"
+      - link "Reportes" [ref=f26e10] [cursor=pointer]:
+        - /url: "?page=reports"
+    - generic [ref=f26e11]:
+      - strong [ref=f26e12]: Administración
+      - generic [ref=f26e13]: Administrador
+      - button "Cerrar sesión" [ref=f26e15] [cursor=pointer]
+  - main [ref=f26e16]:
+    - status [ref=f26e17]: Comprobante aprobado.
+    - link "← Pedidos" [ref=f26e18] [cursor=pointer]:
+      - /url: "?page=orders"
+    - generic [ref=f26e19]:
+      - generic [ref=f26e20]:
+        - 'heading "Pedido #1" [level=1] [ref=f26e21]'
+        - paragraph [ref=f26e22]: Cliente de prueba · 2026-11-23 13:38:19
+      - generic [ref=f26e23]: Entregado
+    - generic [ref=f26e24]:
+      - heading "Productos del pedido" [level=2] [ref=f26e25]
+      - table [ref=f26e27]:
+        - rowgroup [ref=f26e28]:
+          - row [ref=f26e29]:
+            - columnheader "Producto" [ref=f26e30]
+            - columnheader "Cantidad" [ref=f26e31]
+            - columnheader "Precio unitario" [ref=f26e32]
+            - columnheader "Costo unitario" [ref=f26e33]
+            - columnheader "Subtotal" [ref=f26e34]
+        - rowgroup [ref=f26e35]:
+          - row [ref=f26e36]:
+            - cell "Producto de prueba · Minorista" [ref=f26e37]
+            - cell "1" [ref=f26e38]
+            - cell "Gs. 3.000.000" [ref=f26e39]
+            - cell "Gs. 1.000" [ref=f26e40]
+            - cell "Gs. 3.000.000" [ref=f26e41]
+      - paragraph [ref=f26e42]:
+        - strong [ref=f26e43]: Total Gs. 3.000.000
+        - text: · Seña Gs. 1.500.000 · Saldo Gs. 1.500.000
+    - generic [ref=f26e44]:
+      - heading "Comprobantes" [level=2] [ref=f26e45]
+      - table [ref=f26e47]:
+        - rowgroup [ref=f26e48]:
+          - row [ref=f26e49]:
+            - columnheader "Cobro" [ref=f26e50]
+            - columnheader "Importe" [ref=f26e51]
+            - columnheader "Estado" [ref=f26e52]
+            - columnheader "Comprobante" [ref=f26e53]
+            - columnheader "Revisión" [ref=f26e54]
+        - rowgroup [ref=f26e55]:
+          - row [ref=f26e56]:
+            - cell "Seña 2026-11-23 13:38:19" [ref=f26e57]: Seña2026-11-23 13:38:19
+            - cell "Gs. 1.500.000" [ref=f26e58]
+            - cell "Aprobado" [ref=f26e59]
+            - cell [ref=f26e61]:
+              - link "Descargar" [ref=f26e62] [cursor=pointer]:
+                - /url: "?page=proof&id=1"
+            - cell "2026-11-23 13:39:14 · Administración" [ref=f26e63]
+          - row [ref=f26e64]:
+            - cell "Saldo 2026-11-23 13:40:32" [ref=f26e65]: Saldo2026-11-23 13:40:32
+            - cell "Gs. 1.500.000" [ref=f26e66]
+            - cell "Aprobado" [ref=f26e67]
+            - cell [ref=f26e69]:
+              - link "Descargar" [ref=f26e70] [cursor=pointer]:
+                - /url: "?page=proof&id=2"
+            - cell "2026-11-23 13:41:27 · Administración" [ref=f26e71]
+    - generic [ref=f26e72]:
+      - heading "Historial" [level=2] [ref=f26e73]
+      - list [ref=f26e74]:
+        - listitem [ref=f26e75]:
+          - generic [ref=f26e76]: Saldo · comprobante aprobado.
+          - generic [ref=f26e77]: 2026-11-23 13:41:27 · Administración
+        - listitem [ref=f26e78]:
+          - generic [ref=f26e79]: Entrega registrada. Saldo enviado a revisión.
+          - generic [ref=f26e80]: 2026-11-23 13:40:32 · Vendedor de prueba
+        - listitem [ref=f26e81]:
+          - generic [ref=f26e82]: Salida de materia prima registrada.
+          - generic [ref=f26e83]: 2026-11-23 13:39:14 · Administración
+        - listitem [ref=f26e84]:
+          - generic [ref=f26e85]: Seña · comprobante aprobado.
+          - generic [ref=f26e86]: 2026-11-23 13:39:14 · Administración
+        - listitem [ref=f26e87]:
+          - generic [ref=f26e88]: Pedido creado. Seña enviada a revisión.
+          - generic [ref=f26e89]: 2026-11-23 13:38:19 · Vendedor de prueba

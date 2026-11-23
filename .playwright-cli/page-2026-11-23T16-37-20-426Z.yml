@@ -1,0 +1,76 @@
+- generic [active] [ref=f9e1]:
+  - complementary [ref=f9e2]:
+    - link "Fibrofácil" [ref=f9e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f9e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f9e5]:
+      - link "Pedidos" [ref=f9e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f9e7] [cursor=pointer]:
+        - /url: "?page=products"
+      - link "Materia prima" [ref=f9e8] [cursor=pointer]:
+        - /url: "?page=materials"
+      - link "Vendedores" [ref=f9e9] [cursor=pointer]:
+        - /url: "?page=sellers"
+      - link "Reportes" [ref=f9e10] [cursor=pointer]:
+        - /url: "?page=reports"
+    - generic [ref=f9e11]:
+      - strong [ref=f9e12]: Administración
+      - generic [ref=f9e13]: Administrador
+      - button "Cerrar sesión" [ref=f9e15] [cursor=pointer]
+  - main [ref=f9e16]:
+    - status [ref=f9e17]: Cambios guardados.
+    - heading "Vendedores" [level=1] [ref=f9e19]
+    - generic [ref=f9e20]:
+      - heading "Cuentas" [level=2] [ref=f9e21]
+      - table [ref=f9e23]:
+        - rowgroup [ref=f9e24]:
+          - row [ref=f9e25]:
+            - columnheader "Nombre" [ref=f9e26]
+            - columnheader "Usuario" [ref=f9e27]
+        - rowgroup [ref=f9e28]:
+          - row [ref=f9e29]:
+            - cell [ref=f9e30]:
+              - link "Vendedor de prueba" [ref=f9e31] [cursor=pointer]:
+                - /url: "?page=sellers&edit=2"
+            - cell "prueba" [ref=f9e32]
+    - generic [ref=f9e33]:
+      - generic [ref=f9e34]:
+        - heading "Añadir vendedor" [level=2] [ref=f9e35]
+        - generic [ref=f9e36]:
+          - generic [ref=f9e37]:
+            - text: Nombre
+            - textbox "Nombre" [ref=f9e38]
+          - generic [ref=f9e39]:
+            - text: Usuario
+            - textbox "Usuario" [ref=f9e40]
+          - generic [ref=f9e41]:
+            - text: Contraseña (mínimo 12 caracteres)
+            - textbox "Contraseña (mínimo 12 caracteres)" [ref=f9e42]
+          - button "Guardar vendedor" [ref=f9e44] [cursor=pointer]
+      - generic [ref=f9e45]:
+        - heading "Configurar salario mensual" [level=2] [ref=f9e46]
+        - generic [ref=f9e47]:
+          - generic [ref=f9e48]:
+            - text: Vendedor
+            - combobox "Vendedor" [ref=f9e49]:
+              - option "Vendedor de prueba" [selected]
+          - generic [ref=f9e50]:
+            - text: Vigente desde
+            - textbox "Vigente desde" [ref=f9e51]: 2026-11
+          - generic [ref=f9e52]:
+            - text: Salario (Gs.)
+            - spinbutton "Salario (Gs.)" [ref=f9e53]
+          - button "Guardar salario" [ref=f9e54] [cursor=pointer]
+    - generic [ref=f9e55]:
+      - heading "Historial de salarios" [level=2] [ref=f9e56]
+      - table [ref=f9e58]:
+        - rowgroup [ref=f9e59]:
+          - row [ref=f9e60]:
+            - columnheader "Desde" [ref=f9e61]
+            - columnheader "Vendedor" [ref=f9e62]
+            - columnheader "Salario" [ref=f9e63]
+        - rowgroup [ref=f9e64]:
+          - row [ref=f9e65]:
+            - cell "Todavía no hay salarios configurados." [ref=f9e66]

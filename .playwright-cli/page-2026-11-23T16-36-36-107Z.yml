@@ -1,0 +1,82 @@
+- generic [ref=f6e1]:
+  - complementary [ref=f6e2]:
+    - link "Fibrofácil" [ref=f6e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f6e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f6e5]:
+      - link "Pedidos" [ref=f6e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f6e7] [cursor=pointer]:
+        - /url: "?page=products"
+      - link "Materia prima" [ref=f6e8] [cursor=pointer]:
+        - /url: "?page=materials"
+      - link "Vendedores" [ref=f6e9] [cursor=pointer]:
+        - /url: "?page=sellers"
+      - link "Reportes" [ref=f6e10] [cursor=pointer]:
+        - /url: "?page=reports"
+    - generic [ref=f6e11]:
+      - strong [ref=f6e12]: Administración
+      - generic [ref=f6e13]: Administrador
+      - button "Cerrar sesión" [ref=f6e15] [cursor=pointer]
+  - main [ref=f6e16]:
+    - link "← Productos" [ref=f6e17] [cursor=pointer]:
+      - /url: "?page=products"
+    - heading "Añadir producto" [level=1] [ref=f6e19]
+    - generic [ref=f6e20]:
+      - generic [ref=f6e21]:
+        - generic [ref=f6e22]:
+          - heading "Datos del producto" [level=2] [ref=f6e23]
+          - generic [ref=f6e24]:
+            - text: Nombre
+            - textbox "Nombre" [ref=f6e25]: Producto de prueba
+          - generic [ref=f6e26]:
+            - generic [ref=f6e27]:
+              - text: Tamaño comercial
+              - textbox "Tamaño comercial" [ref=f6e28]:
+                - /placeholder: Ej. 20 × 15 × 8 cm
+                - text: 10 x 10 cm
+            - generic [ref=f6e29]:
+              - text: Categoría
+              - textbox "Categoría" [ref=f6e30]: Pruebas
+          - generic [ref=f6e31]:
+            - text: Espesor de MDF
+            - combobox "Espesor de MDF" [ref=f6e32]:
+              - option "MDF 3 mm" [selected]
+          - generic [ref=f6e33]:
+            - checkbox "Requiere ensamble" [ref=f6e34]
+            - text: Requiere ensamble
+          - generic [ref=f6e35]:
+            - text: Precio minorista (Gs.)
+            - spinbutton "Precio minorista (Gs.)" [ref=f6e36]: "3000000"
+          - generic [ref=f6e37]:
+            - checkbox "Habilitar venta mayorista" [ref=f6e38]
+            - text: Habilitar venta mayorista
+        - generic [ref=f6e39]:
+          - heading "Diseño de corte" [level=2] [ref=f6e40]
+          - generic [ref=f6e41]:
+            - text: Archivo PLT (hasta 256 KB)
+            - button "Archivo PLT (hasta 256 KB)" [active] [ref=f6e42]
+          - status [ref=f6e43]: Selecciona las piezas en el dibujo o en la lista.
+          - group "Vista previa de piezas seleccionables" [ref=f6e63]:
+            - generic [aria-hidden] [ref=f6e64] [cursor=pointer]
+          - generic [ref=f6e66]:
+            - checkbox "Pieza 1 · 100 cm² · 100 × 100 mm" [ref=f6e67]
+            - text: Pieza 1 · 100 cm² · 100 × 100 mm
+          - generic [ref=f6e44]:
+            - generic [ref=f6e45]:
+              - term [ref=f6e46]: Área seleccionada
+              - definition [ref=f6e47]: —
+            - generic [ref=f6e48]:
+              - term [ref=f6e49]: MDF
+              - definition [ref=f6e50]: —
+            - generic [ref=f6e51]:
+              - term [ref=f6e52]: Pegamento
+              - definition [ref=f6e53]: Gs. 0
+            - generic [ref=f6e54]:
+              - term [ref=f6e55]: Mano de obra
+              - definition [ref=f6e56]: Gs. 0
+            - generic [ref=f6e57]:
+              - term [ref=f6e58]: Costo sugerido
+              - definition [ref=f6e59]: —
+      - button "Guardar producto" [disabled] [ref=f6e61]

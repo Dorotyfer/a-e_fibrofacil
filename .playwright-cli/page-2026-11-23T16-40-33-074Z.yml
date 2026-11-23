@@ -1,0 +1,84 @@
+- generic [active] [ref=f22e1]:
+  - complementary [ref=f22e2]:
+    - link "Fibrofácil" [ref=f22e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f22e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f22e5]:
+      - link "Pedidos" [ref=f22e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f22e7] [cursor=pointer]:
+        - /url: "?page=products"
+    - generic [ref=f22e8]:
+      - strong [ref=f22e9]: Vendedor de prueba
+      - generic [ref=f22e10]: Vendedor
+      - button "Cerrar sesión" [ref=f22e12] [cursor=pointer]
+  - main [ref=f22e13]:
+    - status [ref=f22e14]: Cambios guardados.
+    - link "← Pedidos" [ref=f22e15] [cursor=pointer]:
+      - /url: "?page=orders"
+    - generic [ref=f22e16]:
+      - generic [ref=f22e17]:
+        - 'heading "Pedido #1" [level=1] [ref=f22e18]'
+        - paragraph [ref=f22e19]: Cliente de prueba · 2026-11-23 13:38:19
+      - generic [ref=f22e20]: Entregado
+    - generic [ref=f22e21]:
+      - heading "Productos del pedido" [level=2] [ref=f22e22]
+      - table [ref=f22e24]:
+        - rowgroup [ref=f22e25]:
+          - row [ref=f22e26]:
+            - columnheader "Producto" [ref=f22e27]
+            - columnheader "Cantidad" [ref=f22e28]
+            - columnheader "Precio unitario" [ref=f22e29]
+            - columnheader "Subtotal" [ref=f22e30]
+        - rowgroup [ref=f22e31]:
+          - row [ref=f22e32]:
+            - cell "Producto de prueba · Minorista" [ref=f22e33]
+            - cell "1" [ref=f22e34]
+            - cell "Gs. 3.000.000" [ref=f22e35]
+            - cell "Gs. 3.000.000" [ref=f22e36]
+      - paragraph [ref=f22e37]:
+        - strong [ref=f22e38]: Total Gs. 3.000.000
+        - text: · Seña Gs. 1.500.000 · Saldo Gs. 1.500.000
+    - generic [ref=f22e39]:
+      - heading "Comprobantes" [level=2] [ref=f22e40]
+      - table [ref=f22e42]:
+        - rowgroup [ref=f22e43]:
+          - row [ref=f22e44]:
+            - columnheader "Cobro" [ref=f22e45]
+            - columnheader "Importe" [ref=f22e46]
+            - columnheader "Estado" [ref=f22e47]
+            - columnheader "Comprobante" [ref=f22e48]
+            - columnheader "Revisión" [ref=f22e49]
+        - rowgroup [ref=f22e50]:
+          - row [ref=f22e51]:
+            - cell "Seña 2026-11-23 13:38:19" [ref=f22e52]: Seña2026-11-23 13:38:19
+            - cell "Gs. 1.500.000" [ref=f22e53]
+            - cell "Aprobado" [ref=f22e54]
+            - cell [ref=f22e56]:
+              - link "Descargar" [ref=f22e57] [cursor=pointer]:
+                - /url: "?page=proof&id=1"
+            - cell "2026-11-23 13:39:14 · Administración" [ref=f22e58]
+          - row [ref=f22e59]:
+            - cell "Saldo 2026-11-23 13:40:32" [ref=f22e60]: Saldo2026-11-23 13:40:32
+            - cell "Gs. 1.500.000" [ref=f22e61]
+            - cell "En revisión" [ref=f22e62]
+            - cell [ref=f22e64]:
+              - link "Descargar" [ref=f22e65] [cursor=pointer]:
+                - /url: "?page=proof&id=2"
+            - cell "—" [ref=f22e66]
+    - generic [ref=f22e67]:
+      - heading "Historial" [level=2] [ref=f22e68]
+      - list [ref=f22e69]:
+        - listitem [ref=f22e70]:
+          - generic [ref=f22e71]: Entrega registrada. Saldo enviado a revisión.
+          - generic [ref=f22e72]: 2026-11-23 13:40:32 · Vendedor de prueba
+        - listitem [ref=f22e73]:
+          - generic [ref=f22e74]: Salida de materia prima registrada.
+          - generic [ref=f22e75]: 2026-11-23 13:39:14 · Administración
+        - listitem [ref=f22e76]:
+          - generic [ref=f22e77]: Seña · comprobante aprobado.
+          - generic [ref=f22e78]: 2026-11-23 13:39:14 · Administración
+        - listitem [ref=f22e79]:
+          - generic [ref=f22e80]: Pedido creado. Seña enviada a revisión.
+          - generic [ref=f22e81]: 2026-11-23 13:38:19 · Vendedor de prueba

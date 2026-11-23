@@ -1,0 +1,50 @@
+- generic [active] [ref=f20e1]:
+  - complementary [ref=f20e2]:
+    - link "Fibrofácil" [ref=f20e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f20e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f20e5]:
+      - link "Pedidos" [ref=f20e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f20e7] [cursor=pointer]:
+        - /url: "?page=products"
+    - generic [ref=f20e8]:
+      - strong [ref=f20e9]: Vendedor de prueba
+      - generic [ref=f20e10]: Vendedor
+      - button "Cerrar sesión" [ref=f20e12] [cursor=pointer]
+  - main [ref=f20e13]:
+    - generic [ref=f20e14]:
+      - heading "Pedidos" [level=1] [ref=f20e15]
+      - link "Nuevo pedido" [ref=f20e16] [cursor=pointer]:
+        - /url: "?page=orders&new=1"
+    - generic [ref=f20e17]:
+      - generic [ref=f20e18]:
+        - generic [ref=f20e19]:
+          - text: Estado
+          - combobox "Estado" [ref=f20e20]:
+            - option "Todos" [selected]
+            - option "En revisión"
+            - option "Pendiente"
+            - option "Falta material"
+            - option "Entregado"
+        - button "Filtrar" [ref=f20e21] [cursor=pointer]
+      - table [ref=f20e23]:
+        - rowgroup [ref=f20e24]:
+          - row [ref=f20e25]:
+            - columnheader "Pedido" [ref=f20e26]
+            - columnheader "Cliente" [ref=f20e27]
+            - columnheader "Fecha" [ref=f20e28]
+            - columnheader "Total" [ref=f20e29]
+            - columnheader "Estado" [ref=f20e30]
+            - columnheader "Último cobro" [ref=f20e31]
+        - rowgroup [ref=f20e32]:
+          - row [ref=f20e33]:
+            - cell [ref=f20e34]:
+              - link "#1" [ref=f20e35] [cursor=pointer]:
+                - /url: "?page=orders&id=1"
+            - cell "Cliente de prueba" [ref=f20e36]
+            - cell "2026-11-23 13:38:19" [ref=f20e37]
+            - cell "Gs. 3.000.000" [ref=f20e38]
+            - cell "Pendiente" [ref=f20e39]
+            - cell "Aprobado" [ref=f20e41]

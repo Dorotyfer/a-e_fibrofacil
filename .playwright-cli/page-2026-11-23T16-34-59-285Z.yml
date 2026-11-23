@@ -1,0 +1,88 @@
+- generic [active] [ref=f2e1]:
+  - complementary [ref=f2e2]:
+    - link "Fibrofácil" [ref=f2e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f2e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f2e5]:
+      - link "Pedidos" [ref=f2e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f2e7] [cursor=pointer]:
+        - /url: "?page=products"
+      - link "Materia prima" [ref=f2e8] [cursor=pointer]:
+        - /url: "?page=materials"
+      - link "Vendedores" [ref=f2e9] [cursor=pointer]:
+        - /url: "?page=sellers"
+      - link "Reportes" [ref=f2e10] [cursor=pointer]:
+        - /url: "?page=reports"
+    - generic [ref=f2e11]:
+      - strong [ref=f2e12]: Administración
+      - generic [ref=f2e13]: Administrador
+      - button "Cerrar sesión" [ref=f2e15] [cursor=pointer]
+  - main [ref=f2e16]:
+    - heading "Materia prima" [level=1] [ref=f2e18]
+    - generic [ref=f2e19]:
+      - heading "Existencias" [level=2] [ref=f2e20]
+      - table [ref=f2e22]:
+        - rowgroup [ref=f2e23]:
+          - row [ref=f2e24]:
+            - columnheader "Material" [ref=f2e25]
+            - columnheader "Disponible" [ref=f2e26]
+            - columnheader "Costo promedio por unidad" [ref=f2e27]
+        - rowgroup [ref=f2e28]:
+          - row [ref=f2e29]:
+            - cell "Pegamento" [ref=f2e30]
+            - cell "0 g" [ref=f2e31]
+            - cell "Sin compra registrada" [ref=f2e32]
+    - generic [ref=f2e33]:
+      - generic [ref=f2e34]:
+        - heading "Registrar compra" [level=2] [ref=f2e35]
+        - generic [ref=f2e36]:
+          - generic [ref=f2e37]:
+            - text: Material
+            - combobox "Material" [ref=f2e38]:
+              - option "Pegamento" [selected]
+          - group [ref=f2e39]:
+            - generic [ref=f2e40]:
+              - text: Peso (g)
+              - spinbutton "Peso (g)" [ref=f2e41]
+          - generic [ref=f2e42]:
+            - text: Costo total (Gs.)
+            - spinbutton "Costo total (Gs.)" [ref=f2e43]
+          - button "Registrar entrada" [ref=f2e44] [cursor=pointer]
+      - generic [ref=f2e45]:
+        - generic [ref=f2e46]:
+          - heading "Añadir espesor de MDF" [level=2] [ref=f2e47]
+          - generic [ref=f2e48]:
+            - generic [ref=f2e49]:
+              - text: Espesor (mm)
+              - spinbutton "Espesor (mm)" [ref=f2e50]
+            - button "Añadir material" [ref=f2e51] [cursor=pointer]
+        - generic [ref=f2e52]:
+          - heading "Ajustar existencias" [level=2] [ref=f2e53]
+          - generic [ref=f2e54]:
+            - generic [ref=f2e55]:
+              - text: Material
+              - combobox "Material" [ref=f2e56]:
+                - option "Pegamento (g)" [selected]
+            - generic [ref=f2e57]:
+              - text: Cantidad a sumar o restar
+              - spinbutton "Cantidad a sumar o restar" [ref=f2e58]
+            - generic [ref=f2e59]:
+              - text: Motivo
+              - textbox "Motivo" [ref=f2e60]
+            - button "Guardar ajuste" [ref=f2e61] [cursor=pointer]
+    - generic [ref=f2e62]:
+      - heading "Últimos movimientos" [level=2] [ref=f2e63]
+      - table [ref=f2e65]:
+        - rowgroup [ref=f2e66]:
+          - row [ref=f2e67]:
+            - columnheader "Fecha" [ref=f2e68]
+            - columnheader "Material" [ref=f2e69]
+            - columnheader "Movimiento" [ref=f2e70]
+            - columnheader "Cantidad" [ref=f2e71]
+            - columnheader "Detalle" [ref=f2e72]
+            - columnheader "Registró" [ref=f2e73]
+        - rowgroup [ref=f2e74]:
+          - row [ref=f2e75]:
+            - cell "Todavía no hay movimientos." [ref=f2e76]

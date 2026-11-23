@@ -1,0 +1,43 @@
+- generic [active] [ref=f11e1]:
+  - complementary [ref=f11e2]:
+    - link "Fibrofácil" [ref=f11e3] [cursor=pointer]:
+      - /url: "?page=orders"
+      - generic [aria-hidden] [ref=f11e4]: F
+      - text: Fibrofácil
+    - navigation "Módulos" [ref=f11e5]:
+      - link "Pedidos" [ref=f11e6] [cursor=pointer]:
+        - /url: "?page=orders"
+      - link "Productos" [ref=f11e7] [cursor=pointer]:
+        - /url: "?page=products"
+    - generic [ref=f11e8]:
+      - strong [ref=f11e9]: Vendedor de prueba
+      - generic [ref=f11e10]: Vendedor
+      - button "Cerrar sesión" [ref=f11e12] [cursor=pointer]
+  - main [ref=f11e13]:
+    - generic [ref=f11e14]:
+      - heading "Pedidos" [level=1] [ref=f11e15]
+      - link "Nuevo pedido" [ref=f11e16] [cursor=pointer]:
+        - /url: "?page=orders&new=1"
+    - generic [ref=f11e17]:
+      - generic [ref=f11e18]:
+        - generic [ref=f11e19]:
+          - text: Estado
+          - combobox "Estado" [ref=f11e20]:
+            - option "Todos" [selected]
+            - option "En revisión"
+            - option "Pendiente"
+            - option "Falta material"
+            - option "Entregado"
+        - button "Filtrar" [ref=f11e21] [cursor=pointer]
+      - table [ref=f11e23]:
+        - rowgroup [ref=f11e24]:
+          - row [ref=f11e25]:
+            - columnheader "Pedido" [ref=f11e26]
+            - columnheader "Cliente" [ref=f11e27]
+            - columnheader "Fecha" [ref=f11e28]
+            - columnheader "Total" [ref=f11e29]
+            - columnheader "Estado" [ref=f11e30]
+            - columnheader "Último cobro" [ref=f11e31]
+        - rowgroup [ref=f11e32]:
+          - row [ref=f11e33]:
+            - cell "No hay pedidos para mostrar." [ref=f11e34]
